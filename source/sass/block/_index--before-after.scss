@@ -1,0 +1,39 @@
+.before-after {
+  background: $bg-gray;
+  border: $tmp-border1;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-family: $base-font-header;
+    font-size: $base-font-header-h2-size;
+    line-height: $base-font-header-h2-lh;
+    font-weight: $base-font-header-wn;
+    margin-top: 33px;
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__result-data {
+    font-family: $base-font-header;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: $base-font-header-wn;
+  }
+
+  &__total {
+    font-family: $base-font-header;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

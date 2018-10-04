@@ -1,0 +1,39 @@
+.product {
+  min-height: 480px;
+  background-image: url("../../img/index-background-mobile@1x.jpg ");
+  background-repeat: no-repeat;
+  border: $tmp-border2;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__header {
+    font-family: $base-font-header;
+    font-size: $base-font-header-h1-size;
+    line-height: $base-font-header-h1-lh;
+    font-weight: $base-font-header-wn;
+    color: $color-text-light;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    font-family: $base-font-header;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: $base-font-header-wn;
+    color: $color-text-light;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  &__img {
+    margin: 0 auto 3px auto;
+  }
+}

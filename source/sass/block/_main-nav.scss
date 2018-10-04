@@ -1,0 +1,23 @@
+.main-nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin: 0 auto;
+  }
+
+  &__item a {
+    font-family: $base-font-header;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $color-text;
+    text-transform: uppercase;
+  }
+}

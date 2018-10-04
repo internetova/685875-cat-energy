@@ -1,0 +1,50 @@
+.button {
+  display: block;
+  font-family: $base-font-header;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.button-green {
+  background: $bg_green;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-text-light;
+  width: 280px;
+  height: 40px;
+  padding-top: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.button-green--catalog {
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.button-gray {
+  background: $bg_gray;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-text;
+  width: 280px;
+  height: 40px;
+  padding-top: 12px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.button-gray--catalog {
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: middle;
+  padding: 0;
+}
