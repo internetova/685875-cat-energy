@@ -1,0 +1,31 @@
+.contacts {
+  background: $bg-body;
+  margin-bottom: 40px;
+  border: $tmp-border1;
+
+  &__wrapper {
+    display: flex;
+    margin: 30px auto;
+  }
+
+  &__welcom {
+    font-family: $base-font-header;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: $base-font-header-wn;
+    text-transform: uppercase;
+    margin: 0;
+    margin-right: 18px;
+  }
+
+  &__addres {
+    line-height: 20px;
+    margin: 0;
+  }
+
+  &__map {
+    min-height: 364px;
+    background-image: url("../../img/bg-map-mobile@1x.png");
+    background-repeat: no-repeat;
+  }
+}
