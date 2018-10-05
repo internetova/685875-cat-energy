@@ -24,13 +24,13 @@
     margin-bottom: 36px;
   }
 
-  fieldset {
+  &__fieldset {
     border: none;
     margin: 0;
     padding: 0;
   }
 
-  label {
+  &__label {
     font-family: $base-font-header;
     font-size: 16px;
     line-height: 18px;
@@ -43,7 +43,7 @@
     margin-bottom: 15px;
   }
 
-  hr {
+  &__hr {
     border: 0;
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -79,20 +79,20 @@
     margin-bottom: 30px;
   }
 
-  input::placeholder,
-  textarea::placeholder {
+  &__input::placeholder,
+  &__textarea::placeholder {
     font-family: $base-font-header;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
   }
 
-  textarea {
+  &__textarea {
     width: 100%;
     height: 100px;
   }
 
-  textarea::placeholder {
+  &__textarea::placeholder {
     text-align: center;
   }
 }
