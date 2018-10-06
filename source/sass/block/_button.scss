@@ -18,13 +18,13 @@
   height: 40px;
   padding-top: 12px;
   box-sizing: border-box;
-}
 
-.button-green--catalog {
-  font-size: 16px;
-  line-height: 20px;
-  vertical-align: middle;
-  padding: 0;
+  &--catalog {
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 0;
+  }
 }
 
 .button-gray {
@@ -36,11 +36,11 @@
   height: 40px;
   padding-top: 12px;
   box-sizing: border-box;
-}
 
-.button-gray--catalog {
-  font-size: 16px;
-  line-height: 20px;
-  vertical-align: middle;
-  padding: 0;
+  &--catalog {
+    font-size: 16px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding: 0;
+  }
 }

@@ -1,11 +1,11 @@
 .copy {
   display: flex;
   justify-content: space-between;
+}
 
-  &__link {
-    font-size: 16px;
-    line-height: 16px;
-    color: $color-text;
-    text-decoration: none;
-  }
+.copy__link {
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-text;
+  text-decoration: none;
 }

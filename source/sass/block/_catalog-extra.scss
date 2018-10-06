@@ -1,0 +1,87 @@
+.catalog-extra {
+  border: $tmp-border3;
+}
+
+.catalog-extra__wrapper {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.catalog-extra__header {
+  font-family: $base-font-header;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: $base-font-header-wn;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.catalog-extra__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-extra__item {
+  &::before {
+    content: "";
+    display: block;
+    background: $color-line;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  &:last-child::after {
+    content: "";
+    display: block;
+    background: $color-line;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+}
+
+.catalog-extra__item-header {
+  font-family: $base-font-header;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: $base-font-header-wn;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.catalog-extra__item-data-sheet {
+  width: 100%;
+}
+
+.catalog-extra__item-data-sheet td {
+  font-size: 14px;
+  line-height: 14px;
+
+  &:last-child {
+    text-align: right;
+  }
+}
+
+.catalog-extra__gift {
+  margin-top: 40px;
+  min-height: 289px;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.catalog-extra__gift-info {
+  color: $color-text-light;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 188px;
+}

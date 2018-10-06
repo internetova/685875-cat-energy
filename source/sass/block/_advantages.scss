@@ -1,0 +1,41 @@
+.advantages {
+  border: $tmp-border2;
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.advantages__header {
+  font-family: $base-font-header;
+  font-size: $base-font-header-h2-size;
+  line-height: $base-font-header-h2-lh;
+  font-weight: $base-font-header-wn;
+  margin-top: 33px;
+  margin-bottom: 23px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* пока под вопросом как дизайн сделать*/
+.advantages__item {
+  margin-top: 20px;
+  margin-left: 80px;
+  border: $tmp-border1;
+
+  &::before {
+    content: "";
+    display: block;
+    vertical-align: top;
+    background: $bg-green;
+    width: 60px;
+    height: 60px;
+    margin-left: -80px;
+  }
+}
