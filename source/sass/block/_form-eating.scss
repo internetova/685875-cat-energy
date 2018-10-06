@@ -1,68 +1,66 @@
-.form-eating {
-  &__header {
-    font-family: $base-font-header;
-    font-size: $base-font-header-h2-size;
-    line-height: $base-font-header-h2-lh;
-    font-weight: $base-font-header-wn;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-  }
+.form-eating__header {
+  font-family: $base-font-header;
+  font-size: $base-font-header-h2-size;
+  line-height: $base-font-header-h2-lh;
+  font-weight: $base-font-header-wn;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
 
-  &__wrapper {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-  }
+.form-eating__wrapper {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
 
-  &__info {
-    font-family: $base-font-header;
-    font-size: 15px;
-    line-height: 18px;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 36px;
-  }
+.form-eating__info {
+  font-family: $base-font-header;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 36px;
+}
 
-  &__fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
+.form-eating__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
 
-  &__label {
-    font-family: $base-font-header;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    margin-right: 15px;
-    margin-left: 0;
-  }
+.form-eating__label {
+  font-family: $base-font-header;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 15px;
+  margin-left: 0;
+}
 
-  &__row-wrapper {
-    margin-bottom: 15px;
-  }
+.form-eating__row-wrapper {
+  margin-bottom: 15px;
+}
 
-  &__hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    margin-bottom: 15px;
-    margin-top: 5px;
-  }
+.form-eating__hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
 
-  &__row-design {
-    font-family: $base-font-header;
-    font-size: 24px;
-    line-height: 24px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 30px;
-  }
+.form-eating__row-design {
+  font-family: $base-font-header;
+  font-size: 24px;
+  line-height: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
 
   /* с этим еще буду разбираться, где-то видела как сделать*/
-  &__row-design::after {
+  &::after {
     content: "";
     display: inline-block;
     background: $bg_green;
@@ -71,28 +69,33 @@
     vertical-align: middle;
     margin-left: 20px;
   }
+}
 
-  &__note {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
+.form-eating__note {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 
-  &__input::placeholder,
-  &__textarea::placeholder {
+.form-eating__input {
+  &::placeholder {
     font-family: $base-font-header;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
   }
+}
 
-  &__textarea {
-    width: 100%;
-    height: 100px;
-  }
+.form-eating__textarea {
+  width: 100%;
+  height: 100px;
 
-  &__textarea::placeholder {
+  &::placeholder {
+    font-family: $base-font-header;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
     text-align: center;
   }
 }

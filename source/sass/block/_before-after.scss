@@ -1,0 +1,39 @@
+.before-after {
+  background: $bg-gray;
+  border: $tmp-border1;
+}
+
+.before-after__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.before-after__header {
+  font-family: $base-font-header;
+  font-size: $base-font-header-h2-size;
+  line-height: $base-font-header-h2-lh;
+  font-weight: $base-font-header-wn;
+  margin-top: 33px;
+  margin-bottom: 40px;
+}
+
+.before-after__info {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.before-after__result-data {
+  font-family: $base-font-header;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: $base-font-header-wn;
+}
+
+.before-after__total {
+  font-family: $base-font-header;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
