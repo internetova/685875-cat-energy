@@ -19,11 +19,40 @@
   padding-top: 12px;
   box-sizing: border-box;
 
+  @include adaptive($tablet-width) {
+    font-size: 20px;
+    margin-left: 0;
+    padding-top: 15px;
+  }
+
   &--catalog {
     font-size: 16px;
     line-height: 20px;
     vertical-align: middle;
     padding: 0;
+
+    @include adaptive($tablet-width) {
+      width: 100%;
+    }
+  }
+
+  &--catalog-desktop {
+    @include adaptive($desktop-width) {
+      width: 245px;
+    }
+  }
+
+  &--form {
+    padding: 0;
+
+    @include adaptive($tablet-width) {
+      width: 284px;
+    }
+
+    @include adaptive($desktop-width) {
+      width: 570px;
+      height: 50px;
+    }
   }
 }
 
@@ -37,10 +66,20 @@
   padding-top: 12px;
   box-sizing: border-box;
 
+  @include adaptive($tablet-width) {
+    font-size: 20px;
+    margin-left: 0;
+    padding-top: 15px;
+  }
+
   &--catalog {
     font-size: 16px;
     line-height: 20px;
     vertical-align: middle;
     padding: 0;
+
+    @include adaptive($tablet-width) {
+      width: 100%;
+    }
   }
 }

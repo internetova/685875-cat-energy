@@ -7,7 +7,7 @@
 </head>
 <body>
 <header class="page-header block-width100">
-  <div class="block-width">
+  <div class="page-header__wrapper block-width">
     <a class="page-header__logo-mobile-img" href="#">
       <img src="img/logo-mobile.svg" alt="Кэт энерджи логотип" width="190" height="37">
     </a>
@@ -15,13 +15,13 @@
       <button class="main-nav__toggle" type="button">МЕНЮ</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Главная</a>
+          <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--active" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--active" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -34,57 +34,63 @@
       <p class="form-eating__info">Заполните анкету и мы подберем программу питания для вашего кота</p>
     </div>
     <form class="form-eating__data" action="https://echo.htmlacademy.ru" method="post">
-      <div class="form-eating__wrapper block-width">
-        <fieldset class="form-eating__fieldset">
-          <legend class="visually-hidden">Основные данные</legend>
-          <div class="form-eating__row-wrapper">
-            <label class="form-eating__label" for="cat-name-id">Имя: *</label>
-            <input class="form-eating__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" required>
-          </div>
-          <div class="form-eating__row-wrapper">
-            <label class="form-eating__label" for="cat-weight-id">Вес (кг): *</label>
-            <input class="form-eating__input" id="cat-weight-id" type="text" name="cat-weight" placeholder="7" required>
-          </div>
-          <div class="form-eating__row-wrapper">
-            <label class="form-eating__label" for="cat-age-id">Возраст (лет):</label>
-            <input class="form-eating__input" id="cat-age-id" type="text" name="cat-age" placeholder="7">
+      <div class="form-eating__container-main-data">
+        <div class="form-eating__wrapper form-eating__wrapper--catname block-width">
+          <fieldset class="form-eating__fieldset">
+            <legend class="visually-hidden">Основные данные</legend>
+            <div class="form-eating__row-wrapper">
+              <label class="form-eating__label form-eating__cat-name" for="cat-name-id">Имя: *</label>
+              <input class="form-eating__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" required>
+            </div>
+            <div class="form-eating__row-wrapper">
+              <label class="form-eating__label form-eating__cat-weight" for="cat-weight-id">Вес (кг): *</label>
+              <input class="form-eating__input" id="cat-weight-id" type="text" name="cat-weight" placeholder="7" required>
+            </div>
+            <div class="form-eating__row-wrapper">
+              <label class="form-eating__label form-eating__cat-age" for="cat-age-id">Возраст (лет):</label>
+              <input class="form-eating__input" id="cat-age-id" type="text" name="cat-age" placeholder="7">
+            </div>
+          </fieldset>
+        </div>
+        <hr class="form-eating__hr">
+        <fieldset class="form-eating__fieldset form-eating__fieldset--border">
+          <div class="form-eating__wrapper block-width">
+            <legend class="visually-hidden">Цель диеты</legend>
+            <div class="form-eating__container">
+              <div class="form-eating__row-wrapper">
+                <input class="form-eating__input-radio form-eating__input-cat-fat" type="radio" name="cat-fat" id="cat-fat-id" checked>
+                <label class="form-eating__label form-eating__label-radio" for="cat-fat-id">Похудение</label>
+              </div>
+              <div class="form-eating__row-wrapper">
+                <input class="form-eating__input-radio" type="radio" name="cat-thin" id="cat-thin-id">
+                <label class="form-eating__label form-eating__label-radio" for="cat-thin-id">Набор массы</label>
+              </div>
+              <div class="form-eating__row-wrapper">
+                <input class="form-eating__input-radio" type="radio" name="cat-advice" id="cat-advice-id">
+                <label class="form-eating__label form-eating__label-radio" for="cat-advice-id">Не знаю (Нужен ваш
+                  совет)</label>
+              </div>
+            </div>
           </div>
         </fieldset>
+        <hr class="form-eating__hr">
+
       </div>
-      <hr>
       <fieldset class="form-eating__fieldset">
-        <div class="form-eating__wrapper block-width">
-          <legend class="visually-hidden">Цель диеты</legend>
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input" type="radio" name="cat-fat" id="cat-fat-id" checked>
-            <label class="form-eating__label" for="cat-fat-id">Похудение</label>
-          </div>
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input" type="radio" name="cat-thin" id="cat-thin-id">
-            <label class="form-eating__label" for="cat-thin-id">Набор массы</label>
-          </div>
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input" type="radio" name="cat-advice" id="cat-advice-id">
-            <label class="form-eating__label" for="cat-advice-id">Не знаю (Нужен ваш совет)</label>
-          </div>
-        </div>
-      </fieldset>
-      <hr class="form-eating__hr">
-      <fieldset class="form-eating__fieldset">
-        <legend class="form-eating__row-design">Контактные данные (владельца кота)</legend>
+        <h3 class="form-eating__row-design">Контактные данные (владельца кота)</h3>
         <div class="form-eating__wrapper block-width">
           <div class="form-eating__row-wrapper">
-            <label class="form-eating__label" for="cat-email-id">E-mail:*</label>
+            <label class="form-eating__label form-eating__label-cat-email" for="cat-email-id">E-mail:*</label>
             <input class="form-eating__input" id="cat-email-id" type="text" name="cat-email" placeholder="kuklachev@gmail.com" required>
           </div>
           <div class="form-eating__row-wrapper">
-            <label class="form-eating__label" for="cat-phone-id">Телефон:*</label>
+            <label class="form-eating__label form-eating__label-cat-phone" for="cat-phone-id">Телефон:*</label>
             <input class="form-eating__input" id="cat-phone-id" type="text" name="cat-phone" placeholder="8 (960) 900-60-90" required>
           </div>
         </div>
       </fieldset>
       <fieldset class="form-eating__fieldset">
-        <legend class="form-eating__row-design">Комментарий</legend>
+        <h3 class="form-eating__row-design">Комментарий</h3>
         <div class="form-eating__wrapper block-width">
           <div class="form-eating__row-wrapper">
             <textarea class="form-eating__textarea" name="cat-info" placeholder="Расскажите обо всех повадках кота" required></textarea>
@@ -92,29 +98,31 @@
         </div>
       </fieldset>
       <fieldset class="form-eating__fieldset">
-        <legend class="form-eating__row-design">Дополнительно</legend>
-        <div class="form-eating__wrapper block-width">
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input form-eating__input--checkbox" type="checkbox" name="sugar" id="sugar-id" checked>
+        <h3 class="form-eating__row-design">Дополнительно</h3>
+        <div class="form-eating__wrapper form-eating__wrapper--dopinfo block-width">
+          <div class="form-eating__row-wrapper form-eating__row-wrapper--dopinfo">
+            <input class="form-eating__input-checkbox" type="checkbox" name="sugar" id="sugar-id" checked>
             <label class="form-eating__label" for="sugar-id">Сахарозаменитель</label>
           </div>
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input form-eating__input--checkbox" type="checkbox" name="water" id="water-id">
+          <div class="form-eating__row-wrapper form-eating__row-wrapper--dopinfo">
+            <input class="form-eating__input-checkbox" type="checkbox" name="water" id="water-id">
             <label class="form-eating__label" for="water-id">Питьевая вода</label>
           </div>
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input form-eating__input--checkbox" type="checkbox" name="milk" id="milk-id">
+          <div class="form-eating__row-wrapper form-eating__row-wrapper--dopinfo">
+            <input class="form-eating__input-checkbox" type="checkbox" name="milk" id="milk-id">
             <label class="form-eating__label" for="milk-id">Молоко</label>
           </div>
-          <div class="form-eating__row-wrapper">
-            <input class="form-eating__input form-eating__input--checkbox" type="checkbox" name="vitamins" id="vitamins-id">
+          <div class="form-eating__row-wrapper form-eating__row-wrapper--dopinfo">
+            <input class="form-eating__input-checkbox" type="checkbox" name="vitamins" id="vitamins-id">
             <label class="form-eating__label" for="vitamins-id">Витамины</label>
           </div>
         </div>
       </fieldset>
-      <button class="button button-green button-green--catalog" type="button">Отправить заявку</button>
+      <div class="form-eating__button-wrapper">
+        <button class="button button-green button-green--form" type="button">Отправить заявку</button>
+        <span class="form-eating__note">* — Обязательные поля</span>
+      </div>
     </form>
-    <span class="form-eating__note">* — Обязательные поля</span>
   </section>
 </main>
 <footer class="page-footer  block-width100">

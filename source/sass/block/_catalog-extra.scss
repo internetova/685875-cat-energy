@@ -1,14 +1,23 @@
 .catalog-extra {
-  border: $tmp-border3;
+  @include adaptive($tablet-width) {
+    margin-bottom: 75px;
+  }
 }
 
 .catalog-extra__wrapper {
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+
+  @include adaptive($desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .catalog-extra__header {
+  display: flex;
+  align-items: center;
   font-family: $base-font-header;
   font-size: 24px;
   line-height: 24px;
@@ -16,12 +25,47 @@
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
+
+  @include adaptive($tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include adaptive($desktop-width) {
+    margin-bottom: 70px;
+  }
+
+  &::before {
+    @include adaptive($tablet-width) {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 30px;
+      margin-left: -20px;
+      margin-right: 23px;
+      background: $bg_green;
+      flex-shrink: 0;
+    }
+
+    @include adaptive($desktop-width) {
+      width: 90px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 50px;
+    margin-left: 23px;
+    background: $bg_green;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
 }
 
 .catalog-extra__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include ul-reset();
 }
 
 .catalog-extra__item {
@@ -31,8 +75,12 @@
     background: $color-line;
     height: 1px;
     width: 100%;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    @include adaptive($desktop-width) {
+      margin-top: 15px;
+    }
   }
 
   &:last-child::after {
@@ -42,7 +90,31 @@
     height: 1px;
     width: 100%;
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 35px;
+
+    @include adaptive($desktop-width) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.catalog-extra__item-container {
+  @include adaptive($desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.catalog-extra__item-wraper {
+  @include adaptive($tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+
+  @include adaptive($desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -54,27 +126,88 @@
   font-weight: $base-font-header-wn;
   margin-top: 0;
   margin-bottom: 10px;
+
+  @include adaptive($tablet-width) {
+    font-size: 20px;
+  }
+
+  @include adaptive($desktop-width) {
+    width: 245px;
+    margin-right: 80px;
+  }
 }
 
 .catalog-extra__item-data-sheet {
   width: 100%;
+
+  @include adaptive($tablet-width) {
+    width: 280px;
+  }
+
+  @include adaptive($desktop-width) {
+    width: 285px;
+    margin-right: 80px;
+  }
 }
 
 .catalog-extra__item-data-sheet td {
   font-size: 14px;
   line-height: 14px;
 
+  @include adaptive($tablet-width) {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  @include adaptive($desktop-width) {
+    text-align: left;
+  }
+
   &:last-child {
     text-align: right;
+    text-transform: uppercase;
+
+    @include adaptive($tablet-width) {
+      width: 95px;
+    }
   }
 }
 
 .catalog-extra__gift {
+  position: relative;
   margin-top: 40px;
   min-height: 289px;
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   text-align: center;
+
+  @include adaptive($tablet-width) {
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+    background-size: cover;
+    margin-top: 60px;
+  }
+
+  @include adaptive($desktop-width) {
+    margin-top: 0;
+    width: 245px;
+    min-height: 289px;
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+    background-size: cover;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 55px;
+    height: 60px;
+    background-image: url("../../img/icon-gift.svg");
+  }
 }
 
 .catalog-extra__gift-info {
@@ -84,4 +217,15 @@
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 188px;
+
+  @include adaptive($tablet-width) {
+    margin-top: 70px;
+    width: 170px;
+    text-align: left;
+  }
+
+  @include adaptive($desktop-width) {
+    margin-top: 189px;
+    text-align: center;
+  }
 }

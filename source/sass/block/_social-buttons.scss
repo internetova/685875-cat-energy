@@ -6,6 +6,10 @@
     height: 2px;
     width: 100%;
     margin-bottom: 25px;
+
+    @include adaptive($tablet-width) {
+      content: none;
+    }
   }
 
   &::after {
@@ -16,6 +20,10 @@
     width: 100%;
     margin-top: 22px;
     margin-bottom: 30px;
+
+    @include adaptive($tablet-width) {
+      content: none;
+    }
   }
 }
 

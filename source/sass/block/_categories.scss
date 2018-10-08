@@ -1,23 +1,40 @@
-.categories {
-  border: $tmp-border1;
-}
-
 .categories__wrapper {
   display: flex;
   margin: 0 auto;
 }
 
 .categories__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include ul-reset;
   display: block;
+
+  @include adaptive($desktop-width) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .categories__item {
   background: $bg-gray;
   margin-top: 20px;
   padding: 25px 20px 20px 20px;
+  position: relative;
+
+  @include adaptive($tablet-width) {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 50px 20px 60px 50px;
+  }
+
+  @include adaptive($desktop-width) {
+    min-width: 500px;
+    width: 50%;
+  }
+
+  &:first-child {
+    @include adaptive($desktop-width) {
+      margin-right: 80px;
+    }
+  }
 }
 
 .categories__item-header {
@@ -27,21 +44,159 @@
   font-weight: $base-font-header-wn;
   text-transform: uppercase;
   margin: 0;
+  padding-left: 70px;
   margin-bottom: 20px;
 
-  &::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    background: $bg-green;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 20px;
+  @include adaptive($tablet-width) {
+    font-size: 36px;
+    line-height: 37px;
+    padding-left: 0;
+  }
+
+  @include adaptive($desktop-width) {
+    margin-left: 160px;
+    margin-top: 25px;
+  }
+
+  &--slim {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: $bg-green;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+
+      @include adaptive($tablet-width) {
+        left: unset;
+        top: 58px;
+        right: 60px;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include adaptive($desktop-width) {
+        top: 50px;
+        left: 50px;
+        right: unset;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      left: 28px;
+      background-image: url("../../img/icon-cat-slim.svg");
+      width: 35px;
+      height: 49px;
+
+      @include adaptive($tablet-width) {
+        left: unset;
+        top: 44px;
+        right: 88px;
+        width: 141px;
+        height: 195px;
+      }
+
+      @include adaptive($desktop-width) {
+        top: 45px;
+        left: 65px;
+        right: unset;
+        width: 70px;
+        height: 97px;
+      }
+    }
+  }
+
+  &--pro {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: $bg-green;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+
+      @include adaptive($tablet-width) {
+        left: unset;
+        top: 58px;
+        right: 60px;
+        width: 200px;
+        height: 200px;
+      }
+
+      @include adaptive($desktop-width) {
+        top: 50px;
+        left: 50px;
+        right: unset;
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      background-image: url("../../img/icon-cat-pro.svg");
+      width: 67px;
+      height: 28px;
+
+      @include adaptive($tablet-width) {
+        left: unset;
+        top: 105px;
+        right: 28px;
+        width: 268px;
+        height: 112px;
+      }
+
+      @include adaptive($desktop-width) {
+        top: 75px;
+        left: 34px;
+        right: unset;
+        width: 133px;
+        height: 56px;
+      }
+    }
   }
 }
 
 .categories__item-info {
+  @include adaptive($tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
+
+  &--slim {
+    @include adaptive($tablet-width) {
+      margin-right: 260px;
+    }
+  }
+
+  &--pro {
+    @include adaptive($tablet-width) {
+      margin-right: 295px;
+    }
+  }
+
+  @include adaptive($desktop-width) {
+    margin-top: 70px;
+    margin-right: 30px;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -50,6 +205,10 @@
     width: 100%;
     margin-top: 24px;
     margin-bottom: 20px;
+
+    @include adaptive($tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -61,6 +220,11 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $color-text;
+
+  @include adaptive($tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &::after {
     content: "";

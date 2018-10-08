@@ -2,6 +2,13 @@ $bg-body: #ffffff;
 $bg_green: #68b738;
 $bg-gray: #f2f2f2;
 
+$desktop-width: 1440px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+
+$block-width100: 100%;
+$block-width-mobile: 280px; // можно удалить потом
+
 $base-font-header: "Oswald", sans-serif;
 
 $base-font-header-h1-size: 36px;
@@ -27,8 +34,7 @@ $color-text: #444444;
 $color-text-light: #ffffff;
 $color-line: rgba(0, 0, 0, 0.1);
 
-$block-width100: 320px;
-$block-width-mobile: 280px;
+$form-border: #e7e7e7;
 
 $tmp-border1: 1px solid rgba(115, 255, 71, 0.95);
 $tmp-border2: 1px solid rgba(32, 84, 255, 0.95);

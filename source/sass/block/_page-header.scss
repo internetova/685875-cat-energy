@@ -1,3 +1,35 @@
 .page-header {
-  border: $tmp-border1;
+  @include adaptive($desktop-width) {
+    position: relative;
+  }
+}
+
+.page-header__index {
+  &::after {
+    @include adaptive($desktop-width) {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 696px;
+      background: $bg_green;
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -10;
+    }
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @include adaptive($tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

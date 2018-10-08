@@ -1,12 +1,39 @@
 .contacts {
   background: $bg-body;
   margin-bottom: 40px;
-  border: $tmp-border1;
+
+  @include adaptive($tablet-width) {
+    margin-bottom: 0;
+    //padding-top: 68px;
+    background: $bg-gray;
+  }
+
+  @include adaptive($desktop-width) {
+    position: relative;
+  }
 }
 
 .contacts__wrapper {
   display: flex;
   margin: 30px auto;
+  justify-content: space-between;
+
+  @include adaptive($tablet-width) {
+    margin: 0 auto 30px auto;
+    padding-top: 30px;
+  }
+
+  @include adaptive($desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 570px;
+    height: 71px;
+    background: $bg-body;
+    margin: 0;
+    margin-left: 110px;
+    padding: 65px 68px 64px 75px;
+  }
 }
 
 .contacts__welcom {
@@ -17,15 +44,46 @@
   text-transform: uppercase;
   margin: 0;
   margin-right: 18px;
+
+  @include adaptive($tablet-width) {
+    font-size: 20px;
+    line-height: 25px;
+    width: 180px;
+  }
 }
 
 .contacts__addres {
   line-height: 20px;
   margin: 0;
+
+  @include adaptive($tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 180px;
+    text-align: right;
+  }
+}
+
+.contacts__city {
+  @include adaptive($tablet-width) {
+    display: block;
+    margin-top: 20px;
+  }
 }
 
 .contacts__map {
   min-height: 364px;
   background-image: url("../../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
+  background-size: cover;
+
+  @include adaptive($tablet-width) {
+    min-height: 395px;
+    background-image: url("../../img/bg-map-tablet@1x.png");
+  }
+
+  @include adaptive($desktop-width) {
+    min-height: 402px;
+    background-image: url("../../img/bg-map-desktop@1x.png");
+  }
 }
