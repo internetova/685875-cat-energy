@@ -1,12 +1,12 @@
 .page-header {
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     position: relative;
   }
 }
 
 .page-header__index {
   &::after {
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       content: "";
       position: absolute;
       top: 0;
@@ -27,7 +27,7 @@
   flex-direction: column;
   margin: 0 auto;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

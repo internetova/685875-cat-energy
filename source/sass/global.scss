@@ -26,22 +26,18 @@ img {
   height: auto;
 }
 
-.block-width100 {
-  width: $block-width100;
-}
-
 .block-width {
   width: 280px;
   padding: 0 20px;
   margin: 0 auto;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     //width: 708px;
     width: auto;
     padding: 0 30px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     //width: 1220px;
     width: auto;
     padding: 0 110px;

@@ -1,11 +1,11 @@
 .main-nav {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin-left: auto;
   }
 }
 
 .main-nav__toggle {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -26,7 +26,7 @@
 }
 
 .main-nav__item:not(:last-child) {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin-right: 37px;
   }
 }
@@ -40,19 +40,19 @@
   color: $color-text;
   text-transform: uppercase;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     font-size: 20px;
   }
 
   &--index {
-    @include adaptive($desktop-width) {
-      color: $color-text-light;
+    @media (min-width: $desktop) {
+      color: $color-text-white;
     }
   }
 }

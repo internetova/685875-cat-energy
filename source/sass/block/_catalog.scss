@@ -3,12 +3,12 @@
 }
 
 .catalog__container {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     width: auto;
     padding: 0 30px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     padding: 0 110px;
   }
 }
@@ -21,7 +21,7 @@
   text-align: center;
   margin: 0;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
     text-align: left;
@@ -35,7 +35,7 @@
     width: 100%;
     margin-bottom: 25px;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: none;
     }
   }
@@ -48,7 +48,7 @@
     width: 100%;
     margin-top: 25px;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: none;
     }
   }
@@ -57,7 +57,7 @@
 .catalog__list {
   @include ul-reset();
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -72,12 +72,12 @@
     width: 100%;
     margin-top: 25px;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: none;
     }
   }
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     position: relative;
     margin-top: 100px;
     margin-bottom: 40px;
@@ -88,22 +88,14 @@
   }
 
   &:last-child {
-    @include adaptive($tablet-width) {
+    min-height: 170px;
+
+    @media (min-width: $tablet) {
       border: 1px solid $color-line;
       background: $bg-body;
       padding: 39px;
-      height: 268px;
+      min-height: 268px;
     }
-  }
-}
-
-.catalog__item-img {
-  @include adaptive($tablet-width) {
-    position: absolute;
-    top: -80px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
   }
 }
 
@@ -113,11 +105,21 @@
   flex-wrap: nowrap;
   justify-content: center;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     flex-wrap: wrap;
     max-width: 250px;
     margin: 0;
     padding: 0;
+  }
+}
+
+.catalog__item-img {
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -136,7 +138,7 @@
   margin-bottom: 16px;
   margin-right: 45px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 20px;
     max-width: 135px;
     text-align: center;
@@ -149,12 +151,12 @@
   min-width: 140px;
   border-collapse: collapse;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     min-width: 250px;
     margin-bottom: 30px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     min-width: 170px;
     margin-bottom: 30px;
   }
@@ -164,7 +166,7 @@
   font-size: 12px;
   line-height: 16px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -176,10 +178,22 @@
   }
 }
 
+.catalog__item-button {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 250px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 170px;
+  }
+}
+
 .catalog__more-products {
   text-align: center;
   position: relative;
-  height: 220px;
 
   &::after {
     content: "";
@@ -193,17 +207,23 @@
     background-image: url("../../img/icon-plus-mobile.svg");
     opacity: 0.2;
 
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       width: 58px;
       height: 58px;
       background-image: url("../../img/icon-plus.svg");
     }
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $tablet) {
+    min-height: 220px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 170px;
   }
 }
 
@@ -214,7 +234,7 @@
   text-transform: uppercase;
   margin-top: 80px;
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     width: 150px;
     font-size: 20px;
   }
@@ -225,7 +245,7 @@
   line-height: 16px;
   margin-bottom: 23px;
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     width: 170px;
     font-size: 16px;
   }

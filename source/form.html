@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи: подбор программы питания для котов</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-<header class="page-header block-width100">
+<header class="page-header">
   <div class="page-header__wrapper block-width">
     <a class="page-header__logo-mobile-img" href="#">
       <img src="img/logo-mobile.svg" alt="Кэт энерджи логотип" width="190" height="37">
@@ -17,20 +16,20 @@
       <button class="main-nav__toggle" type="button">МЕНЮ</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+          <a class="main-nav__link main-nav__link--active" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--active" href="catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="form.html">Подбор программы</a>
+          <a class="main-nav__link main-nav__link--active" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 <main>
-  <section class="form-eating block-width100">
+  <section class="form-eating">
     <h1 class="form-eating__header">Подбор программы</h1>
     <div class="form-eating__wrapper block-width">
       <p class="form-eating__info">Заполните анкету и мы подберем программу питания для вашего кота</p>
@@ -41,15 +40,15 @@
           <fieldset class="form-eating__fieldset">
             <legend class="visually-hidden">Основные данные</legend>
             <div class="form-eating__row-wrapper">
-              <label class="form-eating__label form-eating__cat-name" for="cat-name-id">Имя: *</label>
+              <label class="form-eating__label" for="cat-name-id">Имя: *</label>
               <input class="form-eating__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" required>
             </div>
             <div class="form-eating__row-wrapper">
-              <label class="form-eating__label form-eating__cat-weight" for="cat-weight-id">Вес (кг): *</label>
+              <label class="form-eating__label" for="cat-weight-id">Вес (кг): *</label>
               <input class="form-eating__input" id="cat-weight-id" type="text" name="cat-weight" placeholder="7" required>
             </div>
             <div class="form-eating__row-wrapper">
-              <label class="form-eating__label form-eating__cat-age" for="cat-age-id">Возраст (лет):</label>
+              <label class="form-eating__label" for="cat-age-id">Возраст (лет):</label>
               <input class="form-eating__input" id="cat-age-id" type="text" name="cat-age" placeholder="7">
             </div>
           </fieldset>
@@ -82,11 +81,11 @@
         <h3 class="form-eating__row-design">Контактные данные (владельца кота)</h3>
         <div class="form-eating__wrapper block-width">
           <div class="form-eating__row-wrapper">
-            <label class="form-eating__label form-eating__label-cat-email" for="cat-email-id">E-mail:*</label>
+            <label class="form-eating__label" for="cat-email-id">E-mail:*</label>
             <input class="form-eating__input" id="cat-email-id" type="text" name="cat-email" placeholder="kuklachev@gmail.com" required>
           </div>
           <div class="form-eating__row-wrapper">
-            <label class="form-eating__label form-eating__label-cat-phone" for="cat-phone-id">Телефон:*</label>
+            <label class="form-eating__label" for="cat-phone-id">Телефон:*</label>
             <input class="form-eating__input" id="cat-phone-id" type="text" name="cat-phone" placeholder="8 (960) 900-60-90" required>
           </div>
         </div>
@@ -95,7 +94,8 @@
         <h3 class="form-eating__row-design">Комментарий</h3>
         <div class="form-eating__wrapper block-width">
           <div class="form-eating__row-wrapper">
-            <textarea class="form-eating__textarea" name="cat-info" placeholder="Расскажите обо всех повадках кота" required></textarea>
+            <textarea class="form-eating__textarea" name="cat-info" placeholder="Расскажите обо всех повадках кота"
+                      required></textarea>
           </div>
         </div>
       </fieldset>
@@ -127,8 +127,8 @@
     </form>
   </section>
 </main>
-<footer class="page-footer  block-width100">
-  <div class="contacts  block-width100">
+<footer class="page-footer">
+  <div class="contacts">
     <div class="contacts__wrapper block-width">
       <h2 class="visually-hidden">Контакты компании и карта</h2>
       <p class="contacts__welcom">Приглашаем к сотрудничеству дилеров!</p>

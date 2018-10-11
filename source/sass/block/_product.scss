@@ -15,12 +15,12 @@
     background-size: cover;
     z-index: -10;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: none;
     }
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     min-height: 720px;
   }
 }
@@ -36,12 +36,12 @@
   font-size: $base-font-header-h1-size;
   line-height: $base-font-header-h1-lh;
   font-weight: $base-font-header-wn;
-  color: $color-text-light;
+  color: $color-text-white;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
@@ -56,13 +56,13 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: $base-font-header-wn;
-  color: $color-text-light;
+  color: $color-text-white;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
   padding-bottom: 30px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
@@ -74,7 +74,7 @@
 .product__img {
   margin: 0 auto 3px auto;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     order: 1;
     margin-top: -50px;
     z-index: -10;

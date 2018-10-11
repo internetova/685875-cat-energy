@@ -1,5 +1,5 @@
 .form-eating {
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     margin-bottom: 80px;
   }
 }
@@ -12,7 +12,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -24,18 +24,18 @@
   flex-direction: column;
 
   &--dopinfo {
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       flex-direction: row;
       flex-wrap: wrap;
     }
 
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       flex-wrap: nowrap;
     }
   }
 
   &--catname {
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       margin-left: 110px;
       padding: 0;
       min-width: 600px;
@@ -52,7 +52,7 @@
   margin-bottom: 36px;
   width: 240px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 30px;
     width: 345px;
@@ -61,7 +61,7 @@
 }
 
 .form-eating__container-main-data {
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     display: flex;
   }
 }
@@ -72,14 +72,14 @@
   padding: 0;
 
   &--border {
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       border: 1px solid $form-border;
       padding: 20px;
       margin-left: 30px;
       margin-right: 30px;
     }
 
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       margin-right: 110px;
     }
   }
@@ -92,6 +92,7 @@
   text-transform: uppercase;
   margin-right: 15px;
   margin-left: 0;
+  flex-shrink: 0;
 }
 
 .form-eating__row-wrapper {
@@ -100,46 +101,10 @@
   align-items: center;
 
   &--dopinfo {
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       min-width: 330px;
     }
   }
-}
-
-.form-eating__cat-name {
-  width: 60px;
-
-  @include adaptive($tablet-width) {
-    width: 50px;
-  }
-}
-
-.form-eating__cat-weight {
-  width: 100px;
-
-  @include adaptive($tablet-width) {
-    width: 80px;
-  }
-}
-
-.form-eating__cat-age {
-  width: 180px;
-
-  @include adaptive($tablet-width) {
-    width: 120px;
-  }
-}
-
-.form-eating__label-radio {
-  width: 100%;
-}
-
-.form-eating__container {
-  width: 260px;
-}
-
-.form-eating__label-cat-email {
-  width: 70px;
 }
 
 .form-eating__hr {
@@ -150,7 +115,7 @@
   margin-bottom: 15px;
   margin-top: 5px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: none;
   }
 }
@@ -166,7 +131,7 @@
   align-items: center;
 
   &::before {
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: "";
       background: $bg_green;
       height: 3px;
@@ -210,6 +175,10 @@
   }
 }
 
+.form-eating__container {
+  width: 260px;
+}
+
 .form-eating__input-radio {
   margin-right: 15px;
 }
@@ -234,13 +203,13 @@
 }
 
 .form-eating__button-wrapper {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: flex;
     width: 540px;
     margin-left: 30px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     width: 895px;
     margin-top: 40px;
   }

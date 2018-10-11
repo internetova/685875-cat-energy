@@ -12,19 +12,20 @@
   margin-top: 33px;
   margin-bottom: 23px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
   }
 }
 
 .advantages__list {
-  @include ul-reset;
+  @include ul-reset();
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    counter-reset: num-pp;
   }
 }
 
@@ -35,7 +36,7 @@
   padding-left: 80px;
   position: relative;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     max-width: 245px;
     font-size: 16px;
     line-height: 24px;
@@ -55,6 +56,23 @@
     height: 60px;
   }
 
+  @media (min-width: $tablet) {
+    &::after {
+      counter-increment: num-pp; // фон из цифр на лишках
+      content: counter(num-pp);
+      display: block;
+      position: absolute;
+      top: -35px;
+      right: 0;
+      font-family: $base-font-header;
+      font-size: 281px;
+      line-height: 281px;
+      font-weight: 400;
+      color: $bg-gray;
+      z-index: -10;
+    }
+  }
+
   &--leaf {
     &::before {
       content: "";
@@ -65,22 +83,6 @@
       background-image: url("../../img/advantage-leaf@1x.png");
       width: 50px;
       height: 50px;
-    }
-
-    &::after {
-      @include adaptive($tablet-width) {
-        content: "1";
-        display: block;
-        position: absolute;
-        top: -35px;
-        right: 0;
-        font-family: $base-font-header;
-        font-size: 281px;
-        line-height: 281px;
-        font-weight: 400;
-        color: $bg-gray;
-        z-index: -10;
-      }
     }
   }
 
@@ -95,22 +97,6 @@
       width: 50px;
       height: 50px;
     }
-
-    &::after {
-      @include adaptive($tablet-width) {
-        content: "2";
-        display: block;
-        position: absolute;
-        top: -35px;
-        right: 0;
-        font-family: $base-font-header;
-        font-size: 281px;
-        line-height: 281px;
-        font-weight: 400;
-        color: $bg-gray;
-        z-index: -10;
-      }
-    }
   }
 
   &--dining {
@@ -124,22 +110,6 @@
       width: 50px;
       height: 50px;
     }
-
-    &::after {
-      @include adaptive($tablet-width) {
-        content: "3";
-        display: block;
-        position: absolute;
-        top: -35px;
-        right: 0;
-        font-family: $base-font-header;
-        font-size: 281px;
-        line-height: 281px;
-        font-weight: 400;
-        color: $bg-gray;
-        z-index: -10;
-      }
-    }
   }
 
   &--clock {
@@ -152,22 +122,6 @@
       background-image: url("../../img/advantage-clock@1x.png");
       width: 50px;
       height: 50px;
-    }
-
-    &::after {
-      @include adaptive($tablet-width) {
-        content: "4";
-        display: block;
-        position: absolute;
-        top: -35px;
-        right: 0;
-        font-family: $base-font-header;
-        font-size: 281px;
-        line-height: 281px;
-        font-weight: 400;
-        color: $bg-gray;
-        z-index: -10;
-      }
     }
   }
 }

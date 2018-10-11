@@ -1,85 +1,36 @@
 .button {
-  display: block;
+  display: inline-block;
+  background: $bg_green;
+  color: $color-text-white;
   font-family: $base-font-header;
+  font-size: 16px;
+  line-height: 20px;
   text-decoration: none;
+  text-transform: uppercase;
   text-align: center;
   border: none;
   cursor: pointer;
-  text-transform: uppercase;
-  margin: 0 auto;
-}
-
-.button-green {
-  background: $bg_green;
-  font-size: 14px;
-  line-height: 18px;
-  color: $color-text-light;
-  width: 280px;
+  width: 100%;
   height: 40px;
-  padding-top: 12px;
+  vertical-align: middle;
   box-sizing: border-box;
+  padding: 0;
 
-  @include adaptive($tablet-width) {
-    font-size: 20px;
-    margin-left: 0;
-    padding-top: 15px;
-  }
+  &--short {
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 10px;
 
-  &--catalog {
-    font-size: 16px;
-    line-height: 20px;
-    vertical-align: middle;
-    padding: 0;
-
-    @include adaptive($tablet-width) {
-      width: 100%;
+    @media (min-width: $tablet) {
+      width: auto;
+      font-size: 20px;
+      padding-left: 27px;
+      padding-right: 27px;
     }
   }
 
-  &--catalog-desktop {
-    @include adaptive($desktop-width) {
-      width: 245px;
-    }
-  }
-
-  &--form {
-    padding: 0;
-
-    @include adaptive($tablet-width) {
-      width: 284px;
-    }
-
-    @include adaptive($desktop-width) {
-      width: 570px;
-      height: 50px;
-    }
-  }
-}
-
-.button-gray {
-  background: $bg_gray;
-  font-size: 14px;
-  line-height: 18px;
-  color: $color-text;
-  width: 280px;
-  height: 40px;
-  padding-top: 12px;
-  box-sizing: border-box;
-
-  @include adaptive($tablet-width) {
-    font-size: 20px;
-    margin-left: 0;
-    padding-top: 15px;
-  }
-
-  &--catalog {
-    font-size: 16px;
-    line-height: 20px;
-    vertical-align: middle;
-    padding: 0;
-
-    @include adaptive($tablet-width) {
-      width: 100%;
-    }
+  &--gray {
+    background: $bg_gray;
+    color: $color-text;
   }
 }

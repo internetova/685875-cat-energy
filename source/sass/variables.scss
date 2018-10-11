@@ -2,12 +2,9 @@ $bg-body: #ffffff;
 $bg_green: #68b738;
 $bg-gray: #f2f2f2;
 
-$desktop-width: 1440px;
-$tablet-width: 768px;
-$mobile-width: 320px;
-
-$block-width100: 100%;
-$block-width-mobile: 280px; // можно удалить потом
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 320px;
 
 $base-font-header: "Oswald", sans-serif;
 
@@ -31,7 +28,7 @@ $base-font-text-w: normal;
 
 $color-header: #111111;
 $color-text: #444444;
-$color-text-light: #ffffff;
+$color-text-white: #ffffff;
 $color-line: rgba(0, 0, 0, 0.1);
 
 $form-border: #e7e7e7;

@@ -1,5 +1,5 @@
 .catalog-extra {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin-bottom: 75px;
   }
 }
@@ -9,7 +9,7 @@
   margin: 0 auto;
   flex-direction: column;
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -26,17 +26,17 @@
   margin-bottom: 20px;
   margin-left: 20px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 36px;
     line-height: 36px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     margin-bottom: 70px;
   }
 
   &::before {
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: "";
       display: block;
       height: 3px;
@@ -47,7 +47,7 @@
       flex-shrink: 0;
     }
 
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       width: 90px;
     }
   }
@@ -78,7 +78,7 @@
     margin-bottom: 20px;
     margin-top: 30px;
 
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       margin-top: 15px;
     }
   }
@@ -92,14 +92,14 @@
     margin-bottom: 0;
     margin-top: 35px;
 
-    @include adaptive($desktop-width) {
+    @media (min-width: $desktop) {
       margin-top: 15px;
     }
   }
 }
 
 .catalog-extra__item-container {
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,13 +107,13 @@
 }
 
 .catalog-extra__item-wraper {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     margin-bottom: 23px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     margin-bottom: 0;
   }
 }
@@ -127,11 +127,11 @@
   margin-top: 0;
   margin-bottom: 10px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 20px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     width: 245px;
     margin-right: 80px;
   }
@@ -140,11 +140,11 @@
 .catalog-extra__item-data-sheet {
   width: 100%;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     width: 280px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     width: 285px;
     margin-right: 80px;
   }
@@ -154,12 +154,12 @@
   font-size: 14px;
   line-height: 14px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 16px;
     text-align: right;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     text-align: left;
   }
 
@@ -167,9 +167,15 @@
     text-align: right;
     text-transform: uppercase;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       width: 95px;
     }
+  }
+}
+
+.catalog-extra__item-button {
+  @media (min-width: $desktop) {
+    width: 245px;
   }
 }
 
@@ -181,7 +187,7 @@
   background-repeat: no-repeat;
   text-align: center;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     width: 100%;
     min-height: 200px;
     background-image: url("../../img/gift-photo-tablet@1x.jpg");
@@ -189,7 +195,7 @@
     margin-top: 60px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     margin-top: 0;
     width: 245px;
     min-height: 289px;
@@ -211,20 +217,20 @@
 }
 
 .catalog-extra__gift-info {
-  color: $color-text-light;
+  color: $color-text-white;
   font-size: 16px;
   line-height: 20px;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 188px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin-top: 70px;
     width: 170px;
     text-align: left;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     margin-top: 189px;
     text-align: center;
   }

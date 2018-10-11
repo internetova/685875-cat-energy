@@ -2,13 +2,13 @@
   background: $bg-body;
   margin-bottom: 40px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin-bottom: 0;
     //padding-top: 68px;
     background: $bg-gray;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     position: relative;
   }
 }
@@ -18,12 +18,12 @@
   margin: 30px auto;
   justify-content: space-between;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin: 0 auto 30px auto;
     padding-top: 30px;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     position: absolute;
     top: 95px;
     left: 0;
@@ -45,7 +45,7 @@
   margin: 0;
   margin-right: 18px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 25px;
     width: 180px;
@@ -56,7 +56,7 @@
   line-height: 20px;
   margin: 0;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 20px;
     width: 180px;
@@ -65,7 +65,7 @@
 }
 
 .contacts__city {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: block;
     margin-top: 20px;
   }
@@ -77,12 +77,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     min-height: 395px;
     background-image: url("../../img/bg-map-tablet@1x.png");
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     min-height: 402px;
     background-image: url("../../img/bg-map-desktop@1x.png");
   }

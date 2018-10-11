@@ -7,7 +7,7 @@
   flex-direction: column;
   margin: 0 auto;
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -21,7 +21,7 @@
   margin-top: 33px;
   margin-bottom: 40px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -31,7 +31,7 @@
   margin: 0;
   margin-bottom: 30px;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -43,13 +43,13 @@
 }
 
 .before-after__result-wrapper-outer {
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     display: block;
   }
 }
@@ -60,7 +60,7 @@
   line-height: 24px;
   font-weight: $base-font-header-wn;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -73,21 +73,21 @@
   text-align: center;
   text-transform: uppercase;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 20px;
     max-width: 192px;
     text-align: right;
   }
 
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     max-width: 330px;
     text-align: left;
   }
 }
 
 .before-after__total-money {
-  @include adaptive($desktop-width) {
+  @media (min-width: $desktop) {
     margin-left: 60px;
   }
 }

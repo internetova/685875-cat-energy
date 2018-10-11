@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи: каталог товаров питания для котов</title>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-<header class="page-header block-width100">
+<header class="page-header">
   <div class="page-header__wrapper block-width">
     <a class="page-header__logo-mobile-img" href="#">
       <img src="img/logo-mobile.svg" alt="Кэт энерджи логотип" width="190" height="37">
@@ -17,10 +16,10 @@
       <button class="main-nav__toggle" type="button">МЕНЮ</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
+          <a class="main-nav__link main-nav__link--active" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--active" href="catalog.html">Каталог продукции</a>
+          <a class="main-nav__link main-nav__link--active" href="#">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link main-nav__link--active" href="form.html">Подбор программы</a>
@@ -30,7 +29,7 @@
   </div>
 </header>
 <main>
-  <section class="catalog block-width100">
+  <section class="catalog">
     <div class="catalog__container">
       <h1 class="catalog__header">Каталог продукции</h1>
       <ul class="catalog__list">
@@ -57,7 +56,9 @@
               </table>
             </div>
           </div>
-          <button class="button  button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -82,7 +83,9 @@
               </table>
             </div>
           </div>
-          <button class="button button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -107,7 +110,9 @@
               </table>
             </div>
           </div>
-          <button class="button button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -132,7 +137,9 @@
               </table>
             </div>
           </div>
-          <button class="button button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -157,7 +164,9 @@
               </table>
             </div>
           </div>
-          <button class="button button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -182,7 +191,9 @@
               </table>
             </div>
           </div>
-          <button class="button button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -207,7 +218,9 @@
               </table>
             </div>
           </div>
-          <button class="button button-green button-green--catalog" type="button">Заказать</button>
+          <div class="catalog__item-button">
+            <button class="button" type="button">Заказать</button>
+          </div>
         </li>
         <li class="catalog__item">
           <div class="catalog__item-wrapper block-width">
@@ -216,77 +229,87 @@
               <p class="catalog__more-products-info">На самом деле вкусов гораздо больше!</p>
             </div>
           </div>
-          <button class="button button-gray button-gray--catalog" type="button">Показать все</button>
+          <div class="catalog__item-button">
+            <button class="button button--gray" type="button">Показать все</button>
+          </div>
         </li>
       </ul>
     </div>
   </section>
-  <section class="catalog-extra block-width100">
+  <section class="catalog-extra">
     <h2 class="catalog-extra__header">Дополнительные товары</h2>
     <div class="catalog-extra__wrapper block-width">
       <ul class="catalog-extra__list">
         <li class="catalog-extra__item">
           <div class="catalog-extra__item-container">
-          <div class="catalog-extra__item-wraper">
-            <h3 class="catalog-extra__item-header">Сахарозаменитель</h3>
-            <table class="catalog-extra__item-data-sheet">
-              <tbody>
-              <tr>
-                <td>1 упаковка (100 г)</td>
-                <td>100 р.</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <button class="button button-green button-green--catalog  button-green--catalog-desktop" type="button">Заказать</button>
-        </div>
-        </li>
-        <li class="catalog-extra__item">
-          <div class="catalog-extra__item-container">
-          <div class="catalog-extra__item-wraper">
-            <h3 class="catalog-extra__item-header">Питьевая вода</h3>
-            <table class="catalog-extra__item-data-sheet">
-              <tbody>
-              <tr>
-                <td>5 литров</td>
-                <td>50 р.</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <button class="button button-green button-green--catalog button-green--catalog-desktop" type="button">Заказать</button>
+            <div class="catalog-extra__item-wraper">
+              <h3 class="catalog-extra__item-header">Сахарозаменитель</h3>
+              <table class="catalog-extra__item-data-sheet">
+                <tbody>
+                <tr>
+                  <td>1 упаковка (100 г)</td>
+                  <td>100 р.</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="catalog-extra__item-button">
+              <button class="button" type="button">Заказать</button>
+            </div>
           </div>
         </li>
         <li class="catalog-extra__item">
           <div class="catalog-extra__item-container">
-          <div class="catalog-extra__item-wraper">
-            <h3 class="catalog-extra__item-header">Молоко</h3>
-            <table class="catalog-extra__item-data-sheet">
-              <tbody>
-              <tr>
-                <td>1 литр</td>
-                <td>100 р.</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <button class="button button-green button-green--catalog button-green--catalog-desktop" type="button">Заказать</button>
+            <div class="catalog-extra__item-wraper">
+              <h3 class="catalog-extra__item-header">Питьевая вода</h3>
+              <table class="catalog-extra__item-data-sheet">
+                <tbody>
+                <tr>
+                  <td>5 литров</td>
+                  <td>50 р.</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="catalog-extra__item-button">
+              <button class="button" type="button">Заказать</button>
+            </div>
           </div>
         </li>
         <li class="catalog-extra__item">
           <div class="catalog-extra__item-container">
-          <div class="catalog-extra__item-wraper">
-            <h3 class="catalog-extra__item-header">Витамины</h3>
-            <table class="catalog-extra__item-data-sheet">
-              <tbody>
-              <tr>
-                <td>1 упаковка (30 г)</td>
-                <td>300 р.</td>
-              </tr>
-              </tbody>
-            </table>
+            <div class="catalog-extra__item-wraper">
+              <h3 class="catalog-extra__item-header">Молоко</h3>
+              <table class="catalog-extra__item-data-sheet">
+                <tbody>
+                <tr>
+                  <td>1 литр</td>
+                  <td>100 р.</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="catalog-extra__item-button">
+              <button class="button" type="button">Заказать</button>
+            </div>
           </div>
-          <button class="button button-green button-green--catalog button-green--catalog-desktop" type="button">Заказать</button>
+        </li>
+        <li class="catalog-extra__item">
+          <div class="catalog-extra__item-container">
+            <div class="catalog-extra__item-wraper">
+              <h3 class="catalog-extra__item-header">Витамины</h3>
+              <table class="catalog-extra__item-data-sheet">
+                <tbody>
+                <tr>
+                  <td>1 упаковка (30 г)</td>
+                  <td>300 р.</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="catalog-extra__item-button">
+              <button class="button" type="button">Заказать</button>
+            </div>
           </div>
         </li>
       </ul>
@@ -296,8 +319,8 @@
     </div>
   </section>
 </main>
-<footer class="page-footer block-width100">
-  <div class="contacts block-width100">
+<footer class="page-footer">
+  <div class="contacts">
     <div class="contacts__wrapper block-width">
       <h2 class="visually-hidden">Контакты компании и карта</h2>
       <p class="contacts__welcom">Приглашаем к&nbsp;сотрудничеству дилеров!</p>

@@ -1,6 +1,5 @@
 .page-footer {
   background: $bg-gray;
-  //border: $tmp-border2;
 }
 
 .page-footer__wrapper {
@@ -8,7 +7,7 @@
   flex-direction: column;
   margin: 0 auto;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
     min-height: 149px;
@@ -19,7 +18,7 @@
 .page-footer__logo {
   margin: 0 auto 32px auto;
 
-  @include adaptive($tablet-width) {
+  @media (min-width: $tablet) {
     margin: 0;
   }
 }

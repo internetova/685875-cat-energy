@@ -7,7 +7,7 @@
     width: 100%;
     margin-bottom: 25px;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: none;
     }
   }
@@ -21,7 +21,7 @@
     margin-top: 22px;
     margin-bottom: 30px;
 
-    @include adaptive($tablet-width) {
+    @media (min-width: $tablet) {
       content: none;
     }
   }
