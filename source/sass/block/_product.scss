@@ -1,8 +1,28 @@
 .product {
   min-height: 480px;
-  background-image: url("../../img/index-background-mobile@1x.jpg ");
-  background-repeat: no-repeat;
-  border: $tmp-border2;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 305px;
+    background: $bg_green;
+    background-image: url("../../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 720px;
+  }
 }
 
 .product__wrapper {
@@ -16,10 +36,19 @@
   font-size: $base-font-header-h1-size;
   line-height: $base-font-header-h1-lh;
   font-weight: $base-font-header-wn;
-  color: $color-text-light;
+  color: $color-text-white;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    color: $color-text;
+    text-align: left;
+    max-width: 500px;
+  }
 }
 
 .product__info {
@@ -27,13 +56,27 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: $base-font-header-wn;
-  color: $color-text-light;
+  color: $color-text-white;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color-text;
+    text-align: left;
+  }
 }
 
 .product__img {
   margin: 0 auto 3px auto;
+
+  @media (min-width: $tablet) {
+    order: 1;
+    margin-top: -50px;
+    z-index: -10;
+  }
 }

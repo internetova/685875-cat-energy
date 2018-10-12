@@ -1,12 +1,16 @@
 .before-after {
   background: $bg-gray;
-  border: $tmp-border1;
 }
 
 .before-after__wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .before-after__header {
@@ -16,11 +20,38 @@
   font-weight: $base-font-header-wn;
   margin-top: 33px;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .before-after__info {
   margin: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.before-after__result-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.before-after__result-wrapper-outer {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
 }
 
 .before-after__result-data {
@@ -28,6 +59,11 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: $base-font-header-wn;
+
+  @media (min-width: $tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .before-after__total {
@@ -36,4 +72,22 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 192px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 330px;
+    text-align: left;
+  }
+}
+
+.before-after__total-money {
+  @media (min-width: $desktop) {
+    margin-left: 60px;
+  }
 }

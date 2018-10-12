@@ -1,5 +1,16 @@
 .catalog {
-  border: $tmp-border2;
+  margin-top: 20px;
+}
+
+.catalog__container {
+  @media (min-width: $tablet) {
+    width: auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 110px;
+  }
 }
 
 .catalog__header {
@@ -10,6 +21,12 @@
   text-align: center;
   margin: 0;
 
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -17,6 +34,10 @@
     height: 1px;
     width: 100%;
     margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
   }
 
   &::after {
@@ -26,13 +47,20 @@
     height: 1px;
     width: 100%;
     margin-top: 25px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
   }
 }
 
 .catalog__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include ul-reset();
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__item {
@@ -42,7 +70,32 @@
     background: $color-line;
     height: 1px;
     width: 100%;
-    margin-top: 23px;
+    margin-top: 25px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    margin-left: 30px;
+    background: $bg-gray;
+    padding: 40px;
+  }
+
+  &:last-child {
+    min-height: 170px;
+
+    @media (min-width: $tablet) {
+      border: 1px solid $color-line;
+      background: $bg-body;
+      padding: 39px;
+      min-height: 268px;
+    }
   }
 }
 
@@ -50,6 +103,29 @@
   display: flex;
   margin: 0 auto;
   flex-wrap: nowrap;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.catalog__item-img {
+  @media (min-width: $tablet) {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+.catalog__item-data-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__item-header {
@@ -61,31 +137,93 @@
   margin-top: 23px;
   margin-bottom: 16px;
   margin-right: 45px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    max-width: 135px;
+    text-align: center;
+    align-self: center;
+    margin-right: 0;
+  }
 }
 
 .catalog__item-data-sheet {
   min-width: 140px;
+  border-collapse: collapse;
+
+  @media (min-width: $tablet) {
+    min-width: 250px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 170px;
+    margin-bottom: 30px;
+  }
 }
 
 .catalog__item-data-sheet td {
   font-size: 12px;
   line-height: 16px;
 
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $color-line;
+  }
+
   &:last-child {
     text-align: right;
   }
 }
 
+.catalog__item-button {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 250px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 170px;
+  }
+}
+
 .catalog__more-products {
   text-align: center;
+  position: relative;
 
   &::after {
     content: "";
-    display: block;
-    background: $color-line;
-    height: 1px;
-    width: 100%;
-    margin-top: 23px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/icon-plus-mobile.svg");
+    opacity: 0.2;
+
+    @media (min-width: $desktop) {
+      width: 58px;
+      height: 58px;
+      background-image: url("../../img/icon-plus.svg");
+    }
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 220px;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
   }
 }
 
@@ -94,9 +232,21 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  margin-top: 80px;
+
+  @media (min-width: $desktop) {
+    width: 150px;
+    font-size: 20px;
+  }
 }
 
 .catalog__more-products-info {
   font-size: 12px;
   line-height: 16px;
+  margin-bottom: 23px;
+
+  @media (min-width: $desktop) {
+    width: 170px;
+    font-size: 16px;
+  }
 }

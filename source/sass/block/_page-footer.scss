@@ -1,14 +1,24 @@
 .page-footer {
   background: $bg-gray;
-  border: $tmp-border2;
 }
 
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 149px;
+    align-items: center;
+  }
 }
 
 .page-footer__logo {
   margin: 0 auto 32px auto;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+  }
 }

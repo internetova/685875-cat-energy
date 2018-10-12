@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 320px;
   font-family: $base-font-text;
   font-size: $base-font-text-size;
   line-height: $base-font-text-lh;
@@ -25,10 +26,20 @@ img {
   height: auto;
 }
 
-.block-width100 {
-  width: $block-width100;
-}
-
 .block-width {
-  width: $block-width-mobile;
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    //width: 708px;
+    width: auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop) {
+    //width: 1220px;
+    width: auto;
+    padding: 0 110px;
+  }
 }

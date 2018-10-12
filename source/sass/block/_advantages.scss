@@ -1,7 +1,3 @@
-.advantages {
-  border: $tmp-border2;
-}
-
 .advantages__wrapper {
   display: flex;
   flex-direction: column;
@@ -15,27 +11,117 @@
   font-weight: $base-font-header-wn;
   margin-top: 33px;
   margin-bottom: 23px;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include ul-reset();
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: num-pp;
+  }
 }
 
-/* пока под вопросом как дизайн сделать*/
 .advantages__item {
   margin-top: 20px;
-  margin-left: 80px;
-  border: $tmp-border1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 80px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    max-width: 245px;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 0;
+    padding-top: 90px;
+    margin-bottom: 100px;
+  }
 
   &::before {
     content: "";
     display: block;
-    vertical-align: top;
+    position: absolute;
+    top: 2px;
+    left: 0;
     background: $bg-green;
     width: 60px;
     height: 60px;
-    margin-left: -80px;
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      counter-increment: num-pp; // фон из цифр на лишках
+      content: counter(num-pp);
+      display: block;
+      position: absolute;
+      top: -35px;
+      right: 0;
+      font-family: $base-font-header;
+      font-size: 281px;
+      line-height: 281px;
+      font-weight: 400;
+      color: $bg-gray;
+      z-index: -10;
+    }
+  }
+
+  &--leaf {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-image: url("../../img/advantage-leaf@1x.png");
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--powder {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-image: url("../../img/advantage-powder@1x.png");
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--dining {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-image: url("../../img/advantage-dining@1x.png");
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &--clock {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-image: url("../../img/advantage-clock@1x.png");
+      width: 50px;
+      height: 50px;
+    }
   }
 }

@@ -6,6 +6,10 @@
     height: 2px;
     width: 100%;
     margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
   }
 
   &::after {
@@ -16,6 +20,10 @@
     width: 100%;
     margin-top: 22px;
     margin-bottom: 30px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
   }
 }
 
