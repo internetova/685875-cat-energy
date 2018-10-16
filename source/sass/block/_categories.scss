@@ -42,6 +42,7 @@
   font-size: $base-font-header-h3-size;
   line-height: $base-font-header-h3-lh;
   font-weight: $base-font-header-wn;
+  color: $color-header;
   text-transform: uppercase;
   margin: 0;
   padding-left: 70px;
@@ -93,7 +94,7 @@
       position: absolute;
       top: 18px;
       left: 28px;
-      background-image: url("../../img/icon-cat-slim.svg");
+      background-image: url("../img/icon-cat-slim.svg");
       width: 35px;
       height: 49px;
 
@@ -150,7 +151,7 @@
       position: absolute;
       top: 30px;
       left: 10px;
-      background-image: url("../../img/icon-cat-pro.svg");
+      background-image: url("../img/icon-cat-pro.svg");
       width: 67px;
       height: 28px;
 
@@ -219,7 +220,7 @@
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
-  color: $color-text;
+  color: $color-header;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -230,9 +231,26 @@
     content: "";
     display: inline-block;
     vertical-align: middle;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     width: 22px;
     height: 10px;
     margin-left: 10px;
+  }
+
+  &:hover::after {
+    width: 29px;
+    height: 10px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    color: $color-header-active;
+  }
+
+  &:active::after {
+    width: 29px;
+    height: 10px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    opacity: 0.3;
   }
 }

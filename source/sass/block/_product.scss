@@ -10,7 +10,7 @@
     width: 100%;
     height: 305px;
     background: $bg_green;
-    background-image: url("../../img/index-background-mobile@1x.jpg");
+    background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -10;
@@ -21,7 +21,7 @@
   }
 
   @media (min-width: $desktop) {
-    min-height: 720px;
+    min-height: 660px;
   }
 }
 
@@ -45,7 +45,7 @@
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
-    color: $color-text;
+    color: $color-header;
     text-align: left;
     max-width: 500px;
   }
@@ -66,7 +66,7 @@
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
-    color: $color-text;
+    color: $color-header;
     text-align: left;
   }
 }

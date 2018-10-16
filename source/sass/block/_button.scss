@@ -29,8 +29,24 @@
     }
   }
 
+  &:hover {
+    background: $bg-green-dark;
+  }
+
+  &:active {
+    color: $color-header-active-index;
+  }
+
   &--gray {
     background: $bg_gray;
     color: $color-text;
+
+    &:hover {
+      background: $bg-gray-dark;
+    }
+
+    &:active {
+      color: $color-text-light;
+    }
   }
 }

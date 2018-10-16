@@ -1,11 +1,33 @@
 .before-after {
   background: $bg-gray;
+
+  @media (min-width: $tablet) {
+    background: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 463px;
+      background: $bg-gray;
+      bottom: 0;
+      z-index: -10;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      height: 363px;
+    }
+  }
 }
 
 .before-after__wrapper {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding-bottom: 37px;
 
   @media (min-width: $desktop) {
     flex-direction: row;
@@ -18,12 +40,17 @@
   font-size: $base-font-header-h2-size;
   line-height: $base-font-header-h2-lh;
   font-weight: $base-font-header-wn;
+  color: $color-header;
   margin-top: 33px;
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 100px;
   }
 }
 
@@ -35,11 +62,10 @@
     font-size: 16px;
     line-height: 24px;
   }
-}
 
-.before-after__result-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
+  @media (min-width: $desktop) {
+    width: 435px;
+  }
 }
 
 .before-after__result-wrapper-outer {
@@ -54,11 +80,40 @@
   }
 }
 
+.before-after__result-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  @media (min-width: $desktop) {
+    justify-content: start;
+  }
+}
+
+.before-after__result {
+  width: 125px;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid $color-line;
+  border-radius: 5px;
+
+  @media (min-width: $tablet) {
+    width: 160px;
+
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+}
+
 .before-after__result-data {
   font-family: $base-font-header;
   font-size: 24px;
   line-height: 24px;
   font-weight: $base-font-header-wn;
+  color: $color-header;
+  text-transform: uppercase;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet) {
     font-size: 30px;
@@ -66,12 +121,40 @@
   }
 }
 
+.before-after__result-info {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  width: 85px;
+  margin-top: 10px;
+  background: $bg-gray;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -30px;
+
+  @media (min-width: $tablet) {
+    width: 135px;
+    background: $bg-body;
+    margin-bottom: -20px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    background: $bg-gray;
+  }
+}
+
 .before-after__total {
   font-family: $base-font-header;
   font-size: 14px;
   line-height: 20px;
+  color: $color-header;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 20px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -89,5 +172,102 @@
 .before-after__total-money {
   @media (min-width: $desktop) {
     margin-left: 60px;
+  }
+}
+
+.before-after__img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    min-height: 700px;
+
+    /* Временно пока не разобралась с котом*/
+    img {
+      margin-top: 200px;
+    }
+    /* конец */
+  }
+
+  @media (min-width: $desktop) {
+    min-height: 340px;
+
+    /* Временно пока не разобралась с котом*/
+    img {
+      margin-top: 110px;
+    }
+    /* конец */
+  }
+}
+
+.before-after__buttons-wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 197px;
+  margin-top: 20px;
+
+  @media (min-width: $tablet) {
+    width: 570px;
+  }
+}
+
+.before-after__button {
+  font-family: $base-font-header;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-header;
+  text-transform: uppercase;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background: $bg-gray;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      border-bottom: 1px dotted #b8b8b8;
+    }
+  }
+}
+
+.before-after__toggle {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid $color-line;
+  width: 84px;
+  height: 12px;
+  border-radius: 7px;
+
+  @media (min-width: $tablet) {
+    width: 430px;
+    border: none;
+    height: 7px;
+    background: #cccccc;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: $bg_green;
+    width: 35px;
+    height: 6px;
+    border-radius: 4px;
+    top: 3px;
+    left: 5px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
   }
 }

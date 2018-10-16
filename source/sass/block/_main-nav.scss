@@ -1,11 +1,12 @@
 .main-nav {
   @media (min-width: $tablet) {
     margin-left: auto;
+    margin-top: 20px;
   }
 }
 
-.main-nav__toggle {
-  @media (min-width: $tablet) {
+@media (max-width: $mobile-only) {
+  .main-nav--closed .main-nav__list {
     display: none;
   }
 }
@@ -22,7 +23,20 @@
 }
 
 .main-nav__item {
-  margin: 0 auto;
+  &::before {
+    content: "";
+    display: block;
+    background: $color-line;
+    height: 1px;
+    width: calc(100% + 40px);
+    margin: 0;
+    margin-left: -20px;
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      content: none;
+    }
+  }
 }
 
 .main-nav__item:not(:last-child) {
@@ -37,22 +51,46 @@
   line-height: 20px;
   font-weight: 500;
   text-decoration: none;
-  color: $color-text;
+  color: $color-header;
   text-transform: uppercase;
+  display: block;
+  margin-bottom: 25px;
+  text-align: center;
+
+  &:hover {
+    color: $color-header-hover;
+  }
+
+  &:active {
+    color: $color-header-active;
+  }
 
   @media (min-width: $tablet) {
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
+    position: relative;
+
+    &--active::before {
+      content: "";
+      position: absolute;
+      background: $bg_green;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 30px;
+    }
+
+    &--active:hover::before {
+      opacity: 0.6;
+    }
+
+    &--active:active::before {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: $desktop) {
     font-size: 20px;
-  }
-
-  &--index {
-    @media (min-width: $desktop) {
-      color: $color-text-white;
-    }
   }
 }
