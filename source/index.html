@@ -9,21 +9,26 @@
 <body>
 <header class="page-header page-header__index">
   <div class="page-header__wrapper block-width">
-    <a class="page-header__logo-mobile-img" href="#">
-      <img src="img/logo-mobile.svg" alt="Кэт энерджи логотип" width="190" height="37">
-    </a>
+    <div class="page-header__logo-wrapper">
+      <a class="page-header__logo" href="#">
+        <img src="img/logo-mobile.svg" alt="Кэт энерджи логотип" width="190" height="37">
+      </a>
+      <button class="toggle-menu toggle-menu--nojs" type="button">
+        <span class="visually-hidden">МЕНЮ</span>
+        <span class="toggle-menu__line">Закрыть</span>
+      </button>
+    </div>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">МЕНЮ</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index main-nav__link--active" href="#">Главная</a>
+          <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index main-nav__link--active" href="catalog.html">Каталог
+          <a class="main-nav__link" href="catalog.html">Каталог
             продукции</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--index main-nav__link--active" href="form.html">Подбор программы</a>
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -63,7 +68,7 @@
       </ul>
     </div>
   </section>
-  <section class="advantages ">
+  <section class="advantages">
     <div class="advantages__wrapper block-width">
       <h2 class="advantages__header">Как это работает</h2>
       <ul class="advantages__list">
@@ -78,7 +83,7 @@
       </ul>
     </div>
   </section>
-  <section class="before-after ">
+  <section class="before-after">
     <div class="before-after__wrapper block-width">
       <div class="before-after__text-wrapper">
         <h2 class="before-after__header">Живой пример</h2>
@@ -90,11 +95,11 @@
           <div class="before-after__result-wrapper">
             <div class="before-after__result">
               <span class="before-after__result-data">5 кг</span>
-              <span>снижение веса</span>
+              <span class="before-after__result-info">снижение<br> веса</span>
             </div>
             <div class="before-after__result">
               <span class="before-after__result-data">60 дней</span>
-              <span>затрачено времени</span>
+              <span class="before-after__result-info">затрачено времени</span>
             </div>
           </div>
           <p class="before-after__total">Затраты на питание: <span class="before-after__total-money">15 000 руб.</span>
@@ -103,18 +108,24 @@
       </div>
       <div class="before-after__img-wrapper">
         <img src="img/before-mobile@1x.png" alt="Кот до похудения" width="320" height="240">
-        <span>Было</span> <span>Стало</span>
+        <div class="before-after__buttons-wraper">
+          <button class="before-after__button" type="button">Было</button>
+          <div class="before-after__toggle"></div>
+          <button class="before-after__button" type="button">Стало</button>
+        </div>
       </div>
     </div>
   </section>
 </main>
 <footer class="page-footer">
-  <div class="contacts ">
+  <div class="contacts contacts--index">
     <div class="contacts__wrapper block-width">
-      <h2 class="visually-hidden">Контакты компании и карта</h2>
-      <p class="contacts__welcom">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-      <p class="contacts__addres">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
-      </p>
+      <div class="contacts__wrapper-small">
+        <h2 class="visually-hidden">Контакты компании и карта</h2>
+        <p class="contacts__welcom">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+        <p class="contacts__addres">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
+        </p>
+      </div>
     </div>
     <div class="contacts__map"></div>
   </div>
@@ -143,5 +154,6 @@
     </div>
   </div>
 </footer>
+<script src="js/menu.js"></script>
 </body>
 </html>

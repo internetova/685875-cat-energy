@@ -2,23 +2,12 @@
   margin-top: 20px;
 }
 
-.catalog__container {
-  @media (min-width: $tablet) {
-    width: auto;
-    padding: 0 30px;
-  }
-
-  @media (min-width: $desktop) {
-    padding: 0 110px;
-  }
-}
-
 .catalog__header {
   font-family: $base-font-header;
   font-size: $base-font-header-h2-size;
   line-height: $base-font-header-h2-lh;
   font-weight: $base-font-header-wn;
-  text-align: center;
+  color: $color-header;
   margin: 0;
 
   @media (min-width: $tablet) {
@@ -32,7 +21,8 @@
     display: block;
     background: $color-line;
     height: 1px;
-    width: 100%;
+    width: calc(100% + 40px);
+    margin-left: -20px;
     margin-bottom: 25px;
 
     @media (min-width: $tablet) {
@@ -45,7 +35,8 @@
     display: block;
     background: $color-line;
     height: 1px;
-    width: 100%;
+    width: calc(100% + 40px);
+    margin-left: -20px;
     margin-top: 25px;
 
     @media (min-width: $tablet) {
@@ -60,6 +51,11 @@
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: start;
   }
 }
 
@@ -69,7 +65,8 @@
     display: block;
     background: $color-line;
     height: 1px;
-    width: 100%;
+    width: calc(100% + 40px);
+    margin-left: -20px;
     margin-top: 25px;
 
     @media (min-width: $tablet) {
@@ -81,10 +78,42 @@
     position: relative;
     margin-top: 100px;
     margin-bottom: 40px;
-    margin-right: 40px;
-    margin-left: 30px;
     background: $bg-gray;
-    padding: 40px;
+    padding: 30px 37.5px;
+    min-width: 250px;
+    width: 30%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:nth-child(odd) {
+      margin-right: 60px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    min-width: 170px;
+    width: 170px;
+    flex-grow: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    &:nth-child(odd) {
+      margin-right: 40px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: 40px;
+    }
+
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 
   &:last-child {
@@ -93,8 +122,12 @@
     @media (min-width: $tablet) {
       border: 1px solid $color-line;
       background: $bg-body;
-      padding: 39px;
       min-height: 268px;
+      padding: 29px 36.5px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 29px 36.5px;
     }
   }
 }
@@ -107,10 +140,15 @@
 
   @media (min-width: $tablet) {
     flex-wrap: wrap;
-    max-width: 250px;
+    width: 100%;
     margin: 0;
+    margin-top: 30px;
     padding: 0;
   }
+}
+
+.catalog__item-img-wrapper {
+  width: 50%;
 }
 
 .catalog__item-img {
@@ -126,6 +164,14 @@
 .catalog__item-data-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop) {
+    width: 170px;
+  }
 }
 
 .catalog__item-header {
@@ -134,13 +180,15 @@
   line-height: 20px;
   text-transform: uppercase;
   font-weight: $base-font-header-wn;
+  color: $color-header;
   margin-top: 23px;
   margin-bottom: 16px;
   margin-right: 45px;
+  width: 90px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
-    max-width: 135px;
+    width: 145px;
     text-align: center;
     align-self: center;
     margin-right: 0;
@@ -152,7 +200,7 @@
   border-collapse: collapse;
 
   @media (min-width: $tablet) {
-    min-width: 250px;
+    width: 100%;
     margin-bottom: 30px;
   }
 
@@ -178,19 +226,6 @@
   }
 }
 
-.catalog__item-button {
-  width: 280px;
-  margin: 0 auto;
-
-  @media (min-width: $tablet) {
-    width: 250px;
-  }
-
-  @media (min-width: $desktop) {
-    width: 170px;
-  }
-}
-
 .catalog__more-products {
   text-align: center;
   position: relative;
@@ -204,19 +239,14 @@
     margin: 0 auto;
     width: 30px;
     height: 30px;
-    background-image: url("../../img/icon-plus-mobile.svg");
+    background-image: url("../img/icon-plus-mobile.svg");
     opacity: 0.2;
 
     @media (min-width: $desktop) {
       width: 58px;
       height: 58px;
-      background-image: url("../../img/icon-plus.svg");
+      background-image: url("../img/icon-plus.svg");
     }
-  }
-
-  @media (min-width: $tablet) {
-    min-height: 220px;
-    width: 250px;
   }
 
   @media (min-width: $desktop) {
@@ -233,6 +263,7 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-top: 80px;
+  color: $color-header;
 
   @media (min-width: $desktop) {
     width: 150px;

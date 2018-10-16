@@ -1,12 +1,16 @@
 $bg-body: #ffffff;
 $bg_green: #68b738;
+$bg-green-dark: #5eaa2f;
 $bg-gray: #f2f2f2;
+$bg-gray-dark: #ebebeb;
 
 $desktop: 1440px;
 $tablet: 768px;
+$tablet-only: 1439px;
 $mobile: 320px;
+$mobile-only: 767px;
 
-$base-font-header: "Oswald", sans-serif;
+$base-font-header: "Oswald", "Arial", sans-serif;
 
 $base-font-header-h1-size: 36px;
 $base-font-header-h1-lh: 36px;
@@ -26,9 +30,19 @@ $base-font-text-size: 14px;
 $base-font-text-lh: 18px;
 $base-font-text-w: normal;
 
-$color-header: #111111;
-$color-text: #444444;
+$color-header: rgba(17, 17, 17, 1);
+$color-header-hover: rgba(17, 17, 17, 0.6);
+$color-header-active: rgba(17, 17, 17, 0.3);
+
+$color-header-index: rgba(255, 255, 255, 1);
+$color-header-hover-index: rgba(255, 255, 255, 0.6);
+$color-header-active-index: rgba(255, 255, 255, 0.3);
+
+$color-text: rgba(68, 68, 68, 1);
+$color-text-light: rgba(68, 68, 68, 0.3);
 $color-text-white: #ffffff;
+$color-text-form: #222222;
+
 $color-line: rgba(0, 0, 0, 0.1);
 
 $form-border: #e7e7e7;

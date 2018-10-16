@@ -1,38 +1,49 @@
 .contacts {
-  background: $bg-body;
+  background: $bg-gray;
   margin-bottom: 40px;
 
   @media (min-width: $tablet) {
     margin-bottom: 0;
-    //padding-top: 68px;
-    background: $bg-gray;
   }
 
   @media (min-width: $desktop) {
     position: relative;
   }
+
+  &--index {
+    background: $bg-body;
+  }
 }
 
 .contacts__wrapper {
-  display: flex;
-  margin: 30px auto;
-  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media (min-width: $tablet) {
-    margin: 0 auto 30px auto;
-    padding-top: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop) {
+    position: relative;
+    background: transparent;
+    margin: 0 auto;
+    padding: 0;
+    height: 1px;
+  }
+}
+
+.contacts__wrapper-small {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  @media (min-width: $desktop) {
     position: absolute;
-    top: 95px;
-    left: 0;
+    top: 94px;
     width: 570px;
-    height: 71px;
     background: $bg-body;
-    margin: 0;
-    margin-left: 110px;
-    padding: 65px 68px 64px 75px;
+    justify-content: start;
   }
 }
 
@@ -41,26 +52,37 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: $base-font-header-wn;
+  color: $color-header;
   text-transform: uppercase;
   margin: 0;
   margin-right: 18px;
+  width: 180px;
 
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 25px;
-    width: 180px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 60px 65px;
   }
 }
 
 .contacts__addres {
   line-height: 20px;
   margin: 0;
+  width: 140px;
 
   @media (min-width: $tablet) {
     font-size: 16px;
     line-height: 20px;
-    width: 180px;
     text-align: right;
+    width: 180px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 60px 65px 60px 0;
+    text-align: left;
   }
 }
 
@@ -73,17 +95,17 @@
 
 .contacts__map {
   min-height: 364px;
-  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet) {
     min-height: 395px;
-    background-image: url("../../img/bg-map-tablet@1x.png");
+    background-image: url("../img/bg-map-tablet@1x.png");
   }
 
   @media (min-width: $desktop) {
     min-height: 402px;
-    background-image: url("../../img/bg-map-desktop@1x.png");
+    background-image: url("../img/bg-map-desktop@1x.png");
   }
 }

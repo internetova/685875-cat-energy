@@ -1,10 +1,11 @@
-@import "normalize.css";
+@import "normalize.scss";
 @import "fonts";
 @import "variables";
 @import "mixsins";
 @import "global";
 @import "block/button";
 @import "block/page-header";
+@import "block/toggle-menu";
 @import "block/main-nav";
 @import "block/product";
 @import "block/categories";
