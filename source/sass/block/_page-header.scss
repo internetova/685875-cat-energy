@@ -1,7 +1,7 @@
 .page-header {
   @media (min-width: $desktop) {
     position: relative;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 
@@ -19,6 +19,10 @@
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -10;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -50,6 +54,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
   }
 }
 
@@ -58,4 +63,28 @@
   justify-content: space-between;
   align-items: center;
   min-height: 65px;
+}
+
+.page-header__logo-link {
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__logo-img {
+  width: 190px;
+
+  @media (min-width: $tablet) {
+    width: 173px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 202px;
+  }
 }

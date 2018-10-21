@@ -1,7 +1,3 @@
-.catalog {
-  margin-top: 20px;
-}
-
 .catalog__header {
   font-family: $base-font-header;
   font-size: $base-font-header-h2-size;
@@ -14,6 +10,12 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
+    margin-top: 50px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 68px;
   }
 
   &::before {
@@ -23,7 +25,7 @@
     height: 1px;
     width: calc(100% + 40px);
     margin-left: -20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
     @media (min-width: $tablet) {
       content: none;
@@ -37,7 +39,7 @@
     height: 1px;
     width: calc(100% + 40px);
     margin-left: -20px;
-    margin-top: 25px;
+    margin-top: 28px;
 
     @media (min-width: $tablet) {
       content: none;
@@ -67,7 +69,7 @@
     height: 1px;
     width: calc(100% + 40px);
     margin-left: -20px;
-    margin-top: 25px;
+    margin-top: 23px;
 
     @media (min-width: $tablet) {
       content: none;
@@ -76,12 +78,11 @@
 
   @media (min-width: $tablet) {
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin-top: 140px;
+    margin-bottom: 0;
     background: $bg-gray;
-    padding: 30px 37.5px;
-    min-width: 250px;
-    width: 30%;
+    padding: 30px 37.5px 38px 37.5px;
+    flex-basis: 30%;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -95,9 +96,11 @@
   @media (min-width: $desktop) {
     min-width: 170px;
     width: 170px;
+    flex-basis: 170px;
     flex-grow: 0;
     margin-left: 40px;
     margin-right: 40px;
+    margin-top: 142px;
 
     &:nth-child(odd) {
       margin-right: 40px;
@@ -123,11 +126,7 @@
       border: 1px solid $color-line;
       background: $bg-body;
       min-height: 268px;
-      padding: 29px 36.5px;
-    }
-
-    @media (min-width: $desktop) {
-      padding: 29px 36.5px;
+      padding: 29px 36.5px 39px 36.5px;
     }
   }
 }
@@ -154,7 +153,7 @@
 .catalog__item-img {
   @media (min-width: $tablet) {
     position: absolute;
-    top: -80px;
+    bottom: 304px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -167,6 +166,7 @@
 
   @media (min-width: $tablet) {
     width: 100%;
+    margin-bottom: 8px;
   }
 
   @media (min-width: $desktop) {
@@ -181,8 +181,8 @@
   text-transform: uppercase;
   font-weight: $base-font-header-wn;
   color: $color-header;
-  margin-top: 23px;
-  margin-bottom: 16px;
+  margin-top: 21px;
+  margin-bottom: 9px;
   margin-right: 45px;
   width: 90px;
 
@@ -192,6 +192,8 @@
     text-align: center;
     align-self: center;
     margin-right: 0;
+    margin-top: 105px;
+    margin-bottom: 20px;
   }
 }
 
@@ -216,14 +218,18 @@
 
   @media (min-width: $tablet) {
     font-size: 16px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 8px;
     border-bottom: 1px solid $color-line;
   }
 
   &:last-child {
     text-align: right;
   }
+}
+
+.catalog__item-price {
+  text-transform: uppercase;
 }
 
 .catalog__more-products {
@@ -242,14 +248,15 @@
     background-image: url("../img/icon-plus-mobile.svg");
     opacity: 0.2;
 
-    @media (min-width: $desktop) {
+    @media (min-width: $tablet) {
+      top: -3px;
       width: 58px;
       height: 58px;
       background-image: url("../img/icon-plus.svg");
     }
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -263,11 +270,13 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-top: 80px;
+  margin-bottom: 0;
   color: $color-header;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     width: 150px;
     font-size: 20px;
+    margin-top: 105px;
   }
 }
 
@@ -275,9 +284,11 @@
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 23px;
+  margin-top: 7px;
 
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     width: 170px;
     font-size: 16px;
+    margin-top: 28px;
   }
 }

@@ -16,9 +16,18 @@
 }
 
 .page-footer__logo {
-  margin: 0 auto 32px auto;
+  margin: 0 auto 26px auto;
+  transition: 0.5s;
 
   @media (min-width: $tablet) {
     margin: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
