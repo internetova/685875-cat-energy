@@ -1,11 +1,41 @@
 .copy {
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .copy__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   font-size: 16px;
   line-height: 16px;
   color: $color-text;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .copy__icon {
+    fill: #68b738;
+  }
+}
+
+.copy__icon {
+  margin-left: 15px;
+  margin-right: -5px;
+  fill: #666666;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #68b738;
+    opacity: 0.3;
+  }
 }

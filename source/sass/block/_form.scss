@@ -1,6 +1,6 @@
 .form {
   @media (min-width: $desktop) {
-    margin-bottom: 80px;
+    margin-bottom: 73px;
   }
 }
 
@@ -109,7 +109,7 @@
       border-right: 1px solid $color-line;
       margin-left: 0;
       margin-right: 0;
-      margin-bottom: 44px;
+      margin-bottom: 40px;
     }
   }
 
@@ -137,7 +137,7 @@
       }
 
       @media (min-width: $desktop) {
-        top: 45px;
+        top: 48px;
         width: 100vw;
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
@@ -230,11 +230,7 @@
   align-items: center;
   min-height: 45px;
   width: 100%;
-
-  &:first-child {
-    flex-shrink: 0;
-    margin-right: 10px;
-  }
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 15px;
@@ -274,6 +270,7 @@
   @media (min-width: $desktop) {
     flex-wrap: nowrap;
     justify-content: start;
+    margin-bottom: 25px;
   }
 }
 
@@ -331,7 +328,7 @@
 
   @media (min-width: $desktop) {
     margin-top: 0;
-    margin-bottom: 0;
+    //margin-bottom: 30px;
   }
 }
 
@@ -370,13 +367,15 @@
   margin-bottom: 30px;
 
   @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1;
     text-align: left;
     align-self: center;
     margin: 0;
   }
 
   @media (min-width: $desktop) {
-    padding-left: 40px;
+    padding-left: 25px;
   }
 }
 
@@ -488,7 +487,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 23px;
+    margin-top: 25px;
   }
 
   &--small1 {
@@ -519,23 +518,51 @@
   line-height: 18px;
   text-transform: uppercase;
 
+  @media (min-width: $tablet) {
+    height: 52px;
+    padding: 10px 13px 11px 21px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
   &:hover {
     border: 1px solid #cfcfcf;
   }
 
   &:active {
-    border: 1px solid #444444;
+    border: 2px solid #444444;
   }
 
   &:focus {
-    border: 1px solid #444444;
+    border: 2px solid #444444;
   }
 
+  &:focus:invalid {
+    border: 2px solid #ff8282;
+  }
+
+  &--icon {
+    padding-right: 40px;
+  }
+}
+
+.form__input:active ~ svg,
+.form__input:focus ~ svg {
+  fill: #68b738;
+}
+
+.form__input:focus:invalid ~ svg {
+  fill: #ff8282;
+}
+
+.form__input__icon {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  fill: #222222;
+
   @media (min-width: $tablet) {
-    height: 52px;
-    padding: 13px 13px 11px 21px;
-    font-size: 20px;
-    line-height: 1;
+    padding-top: 5px;
   }
 }
 
@@ -565,7 +592,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 43px;
+    margin-bottom: 40px;
   }
 
   &:hover {

@@ -88,11 +88,17 @@
         <ul class="form__contacts-list">
           <li class="form__contacts-item">
             <label class="form__label" for="cat-email-id">E-mail:*</label>
-            <input class="form__input" id="cat-email-id" type="text" name="cat-email" placeholder="kuklachev@gmail.com" required>
+            <input class="form__input form__input--icon" id="cat-email-id" type="text" name="cat-email" placeholder="kuklachev@gmail.com" required>
+            <svg class="form__input__icon" width="17" height="20">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
           </li>
           <li class="form__contacts-item">
             <label class="form__label" for="cat-phone-id">Телефон:*</label>
-            <input class="form__input" id="cat-phone-id" type="text" name="cat-phone" placeholder="8 (960) 900-60-90" required>
+            <input class="form__input form__input--icon" id="cat-phone-id" type="text" name="cat-phone" placeholder="8 (960) 900-60-90" required>
+            <svg class="form__input__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
           </li>
         </ul>
       </fieldset>
@@ -145,26 +151,40 @@
     <div class="contacts__map"></div>
   </div>
   <div class="page-footer__wrapper block-width">
-    <a class="page-footer__logo" href="#">
-      <img src="img/logo-footer.svg" alt="Кэт энерджи" width="127" height="23">
+    <a class="page-footer__logo-link" href="index.html">
+      <img class="page-footer__logo" src="img/logo-footer.svg" alt="Кэт энерджи" width="127" height="23">
     </a>
     <div class="social-buttons">
       <ul class="social-buttons__list">
         <li class="social-buttons__item">
-          <a class="social-buttons__link" href="#">Вконтакте</a>
+          <a class="social-buttons__link" href="#">
+            <svg class="social-buttons__icon social-buttons__icon--vk" width="22" height="12">
+              <use xlink:href="img/sprite.svg#icon-vk-mobile"></use>
+            </svg>
+          </a>
         </li>
         <li class="social-buttons__item">
-          <a class="social-buttons__link" href="#">Инстаграм</a>
+          <a class="social-buttons__link" href="#">
+            <svg class="social-buttons__icon social-buttons__icon--insta" width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon-insta-mobile"></use>
+            </svg>
+          </a>
         </li>
         <li class="social-buttons__item">
-          <a class="social-buttons__link" href="#">Фейсбук</a>
+          <a class="social-buttons__link" href="#">
+            <svg class="social-buttons__icon social-buttons__icon--fb" width="10" height="19">
+              <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
     <div class="copy">
-      <a class="copy__link" href="#">HTML Academy</a>
-      <a class="copy__logo-mobile" href="#">
-        <img src="img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+      <a class="copy__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copy__name">HTML Academy</span>
+        <svg class="copy__icon" width="40" height="40">
+          <use xlink:href="img/sprite.svg#htmlacademy"></use>
+        </svg>
       </a>
     </div>
   </div>
