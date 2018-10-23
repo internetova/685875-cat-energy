@@ -49,15 +49,21 @@
             <ul class="form__input-data-list">
               <li class="form__input-data-item">
                 <label class="form__label" for="cat-name-id">Имя:*</label>
-                <input class="form__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" required>
+                <div class="form__input-wrapper">
+                  <input class="form__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" required>
+                </div>
               </li>
               <li class="form__input-data-item">
                 <label class="form__label" for="cat-weight-id">Вес (кг):*</label>
-                <input class="form__input" id="cat-weight-id" type="text" name="cat-weight" placeholder="7" required>
+                <div class="form__input-wrapper">
+                  <input class="form__input" id="cat-weight-id" type="number" step="1" min="1" name="cat-weight" placeholder="7" required>
+                </div>
               </li>
               <li class="form__input-data-item">
                 <label class="form__label" for="cat-age-id">Возраст (лет):</label>
-                <input class="form__input" id="cat-age-id" type="text" name="cat-age" placeholder="7">
+                <div class="form__input-wrapper">
+                  <input class="form__input" id="cat-age-id" type="number" step="1" min="1" name="cat-age" placeholder="7">
+                </div>
               </li>
             </ul>
           </fieldset>
@@ -88,14 +94,18 @@
         <ul class="form__contacts-list">
           <li class="form__contacts-item">
             <label class="form__label" for="cat-email-id">E-mail:*</label>
-            <input class="form__input form__input--icon" id="cat-email-id" type="text" name="cat-email" placeholder="kuklachev@gmail.com" required>
+            <div class="form__input-wrapper">
+              <input class="form__input form__input--icon" id="cat-email-id" type="email" name="cat-email" placeholder="kuklachev@gmail.com" required>
+            </div>
             <svg class="form__input__icon" width="17" height="20">
               <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
           </li>
           <li class="form__contacts-item">
             <label class="form__label" for="cat-phone-id">Телефон:*</label>
-            <input class="form__input form__input--icon" id="cat-phone-id" type="text" name="cat-phone" placeholder="8 (960) 900-60-90" required>
+            <div class="form__input-wrapper">
+              <input class="form__input form__input--icon" id="cat-phone-id" type="tel" max="11" name="cat-phone" placeholder="8 (960) 900-60-90" required>
+            </div>
             <svg class="form__input__icon" width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>
@@ -148,7 +158,9 @@
         </p>
       </div>
     </div>
-    <div class="contacts__map"></div>
+    <div class="contacts__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602"  allowfullscreen></iframe>
+    </div>
   </div>
   <div class="page-footer__wrapper block-width">
     <a class="page-footer__logo-link" href="index.html">
@@ -190,5 +202,7 @@
   </div>
 </footer>
 <script src="js/menu.js"></script>
+<script src="js/picturefill.min.js"></script>
+<script src="js/svgxuse.min.js"></script>
 </body>
 </html>
