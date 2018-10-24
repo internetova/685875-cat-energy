@@ -7,21 +7,26 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
     "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
     "gulp": "4.0.x",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
+    "gulp-svgstore": "^7.0.0",
     "gulp-webp": "^3.0.0",
     "stylelint": "9.6.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "svgxuse": "^1.2.6"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
-    "start": "gulp start",
-    "webp": "gulp webp"
+    "build": "gulp build",
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",
@@ -39,7 +44,5 @@
   "engines": {
     "node": "8.12"
   },
-  "dependencies": {
-    "svgxuse": "^1.2.6"
-  }
+  "dependencies": {}
 }
