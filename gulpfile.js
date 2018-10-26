@@ -14,6 +14,8 @@ var svgstore = require("gulp-svgstore");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
+var size = require("gulp-size");
+var changed = require("gulp-changed");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -25,13 +27,16 @@ gulp.task("css", function () {
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream())
+    .pipe(size())
     .pipe(csso())
+    .pipe(size())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(changed("build/img"))
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
@@ -56,6 +61,7 @@ gulp.task("svgxuse", function () {
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(changed("build/img/*.webp"))
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -66,11 +72,13 @@ gulp.task("clean", function () {
 
 gulp.task("jsmin", function (cb) {
   pump([
-  gulp.src("build/js/*.js"),
+  gulp.src("build/js/*.js")
+    .pipe(size()),
       uglify(),
       rename({
         extname: ".min.js"
-      }),
+      })
+        .pipe(size()),
       gulp.dest("build/js")
     ],
     cb
@@ -99,7 +107,9 @@ gulp.task("html", function () {
 
 gulp.task("htmlmin", () => {
   return gulp.src("source/*.html")
+    .pipe(size())
     .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(size())
     .pipe(gulp.dest("build"));
 });
 
@@ -113,7 +123,9 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/*.svg", gulp.series("sprite", "refresh"));
+  gulp.watch("source/img/*.{png,jpg,svg}", gulp.series("images", "refresh"));
+  gulp.watch("source/img/*.{jpg,png}", gulp.series("webp", "refresh"));
+  gulp.watch("source/img/*.svg", gulp.series("images", "sprite", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
