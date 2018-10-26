@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи: подбор программы питания для котов</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 <body>
 <header class="page-header">
@@ -104,7 +106,7 @@
           <li class="form__contacts-item">
             <label class="form__label" for="cat-phone-id">Телефон:*</label>
             <div class="form__input-wrapper">
-              <input class="form__input form__input--icon" id="cat-phone-id" type="tel" max="11" name="cat-phone" placeholder="8 (960) 900-60-90" required>
+              <input class="form__input form__input--icon" id="cat-phone-id" type="tel" name="cat-phone" placeholder="8 (960) 900-60-90" required>
               <svg class="form__input__icon" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
@@ -201,7 +203,7 @@
     </div>
   </div>
 </footer>
-<script src="js/menu.js"></script>
+<script src="js/menu.min.js"></script>
 <script src="js/picturefill.min.js"></script>
 <script src="js/svgxuse.min.js"></script>
 </body>

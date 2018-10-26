@@ -337,7 +337,11 @@
       left: 0;
       height: 1px;
       width: 100%;
-      border-bottom: 1px dotted #b8b8b8;
+      border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+    }
+
+    &:hover::after {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.4);
     }
   }
 }
