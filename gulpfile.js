@@ -7,6 +7,8 @@ var del = require("del");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+const sourcemaps = require("gulp-sourcemaps");
+const gcmq = require("gulp-group-css-media-queries");
 var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -21,17 +23,20 @@ var server = require("browser-sync").create();
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(gcmq())
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
-    .pipe(server.stream())
     .pipe(size())
     .pipe(csso())
     .pipe(size())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function () {
@@ -122,7 +127,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
+  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "refresh"));
   gulp.watch("source/img/*.{png,jpg,svg}", gulp.series("images", "refresh"));
   gulp.watch("source/img/*.{jpg,png}", gulp.series("webp", "refresh"));
   gulp.watch("source/img/*.svg", gulp.series("images", "sprite", "refresh"));
