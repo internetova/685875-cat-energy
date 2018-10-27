@@ -32,7 +32,6 @@
   margin: 0 auto;
   padding-bottom: 20px;
 
-
   @media (min-width: $tablet) {
     &::before {
       content: "";
@@ -50,8 +49,6 @@
   }
 
   @media (min-width: $desktop) {
-    flex-direction: row;
-    justify-content: space-between;
     position: relative;
 
     &::before {
