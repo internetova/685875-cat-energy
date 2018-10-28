@@ -1,46 +1,28 @@
 .page-header {
   @media (min-width: $desktop) {
     position: relative;
-    padding-top: 30px;
+    padding-top: 50px;
   }
-}
 
-.page-header__index {
-  &::after {
-    @media (min-width: $desktop) {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 50%;
-      height: 696px;
-      background: $bg_green;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -10;
+  &--index {
+    &::after {
+      @media (min-width: $desktop) {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 696px;
+        background: $bg_green;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -10;
 
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/index-background-desktop@2x.jpg");
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+        }
       }
-    }
-  }
-}
-
-@media (min-width: $desktop) {
-  .page-header__index .main-nav__link {
-    color: $color-header-index;
-
-    &:hover {
-      color: $color-header-hover-index;
-    }
-
-    &:active {
-      color: $color-header-active-index;
-    }
-
-    &::before {
-      background: $color-header-index;
     }
   }
 }

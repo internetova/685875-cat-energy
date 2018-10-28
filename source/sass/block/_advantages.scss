@@ -102,7 +102,7 @@
       content: counter(num-pp);
       display: block;
       position: absolute;
-      top: -35px;
+      top: -38px;
       right: 0;
       font-family: $base-font-header;
       font-size: 281px;
@@ -110,6 +110,14 @@
       font-weight: 400;
       color: $bg-gray;
       z-index: -10;
+    }
+
+    &:first-child::after {
+      right: 20px;
+
+      @media (min-width: $desktop) {
+        right: 18px;
+      }
     }
   }
 
@@ -119,7 +127,9 @@
       display: block;
       position: absolute;
       background-image: url("../img/advantage-leaf@1x.png");
-      background-size: 100%;
+      background-size: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/advantage-leaf@2x.png");
@@ -137,7 +147,9 @@
       display: block;
       position: absolute;
       background-image: url("../img/advantage-powder@1x.png");
-      background-size: 100%;
+      background-size: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/advantage-powder@2x.png");
@@ -151,7 +163,9 @@
       display: block;
       position: absolute;
       background-image: url("../img/advantage-dining@1x.png");
-      background-size: 100%;
+      background-size: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/advantage-dining@2x.png");
@@ -165,7 +179,9 @@
       display: block;
       position: absolute;
       background-image: url("../img/advantage-clock@1x.png");
-      background-size: 100%;
+      background-size: 50px;
+      background-position: center;
+      background-repeat: no-repeat;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/advantage-clock@2x.png");

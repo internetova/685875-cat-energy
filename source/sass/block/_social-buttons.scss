@@ -19,7 +19,7 @@
     height: 1px;
     width: 100%;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 
     @media (min-width: $tablet) {
       content: none;
@@ -34,11 +34,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: -10px;
+
+  @media (min-width: $tablet) {
+    margin-left: 20px;
+  }
 }
 
 .social-buttons__item {
   &:not(:last-child) {
-    margin-right: 37px;
+    margin-right: 38px;
+
+    @media (min-width: $tablet) {
+      margin-right: 27px;
+    }
   }
 }
 

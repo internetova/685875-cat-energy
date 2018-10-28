@@ -7,8 +7,8 @@ var del = require("del");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-const sourcemaps = require("gulp-sourcemaps");
-const gcmq = require("gulp-group-css-media-queries");
+var sourcemaps = require("gulp-sourcemaps");
+var gcmq = require("gulp-group-css-media-queries");
 var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -61,12 +61,14 @@ gulp.task("sprite", function () {
 
 gulp.task("svgxuse", function () {
   return gulp.src("node_modules/svgxuse/svgxuse.min.js")
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("source/js"))
+    .pipe(gulp.src("node_modules/svg4everybody/dist/svg4everybody.min.js"))
+    .pipe(gulp.dest("source/js"));
 });
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(changed("build/img/*.webp"))
+    .pipe(changed("build/img/**/*.webp"))
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -97,7 +99,7 @@ gulp.task("delduble",function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
+    "source/img/**/*",
     "source/js/**"
     ], {
     base: "source"
@@ -118,6 +120,13 @@ gulp.task("htmlmin", () => {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("pixel", function () {
+  return gulp.src("node_modules/pixel-glass/*.{css,js,md}")
+    .pipe(gulp.dest("build/pixel"))
+    .pipe(gulp.src("source/pixel/*.{png,jpg,txt}"))
+    .pipe(gulp.dest("build/pixel"));
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -130,7 +139,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/*.{png,jpg,svg}", gulp.series("images", "refresh"));
   gulp.watch("source/img/*.{jpg,png}", gulp.series("webp", "refresh"));
-  gulp.watch("source/img/*.svg", gulp.series("images", "sprite", "refresh"));
+  gulp.watch("source/img/*.svg", gulp.series("sprite", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
@@ -141,16 +150,17 @@ gulp.task("refresh", function (done) {
 
 gulp.task("build", gulp.series(
   "clean",
+  "svgxuse",
   "copy",
   "css",
   "images",
   "sprite",
-  "svgxuse",
   "webp",
   "jsmin",
   "delduble",
   "html",
-  "htmlmin"
+  "htmlmin",
+  "pixel"
 ));
 
 gulp.task("start", gulp.series("build", "server"));

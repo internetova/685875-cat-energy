@@ -54,7 +54,7 @@
   color: $color-header;
   text-transform: uppercase;
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
 
   &:hover {
@@ -92,5 +92,21 @@
 
   @media (min-width: $desktop) {
     font-size: 20px;
+
+    &--index {
+      color: $color-header-index;
+
+      &:hover {
+        color: $color-header-hover-index;
+      }
+
+      &:active {
+        color: $color-header-active-index;
+      }
+
+      &::before {
+        background: $color-header-index;
+      }
+    }
   }
 }
