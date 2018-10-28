@@ -61,7 +61,9 @@ gulp.task("sprite", function () {
 
 gulp.task("svgxuse", function () {
   return gulp.src("node_modules/svgxuse/svgxuse.min.js")
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("source/js"))
+    .pipe(gulp.src("node_modules/svg4everybody/dist/svg4everybody.min.js"))
+    .pipe(gulp.dest("source/js"));
 });
 
 gulp.task("webp", function () {
@@ -148,11 +150,11 @@ gulp.task("refresh", function (done) {
 
 gulp.task("build", gulp.series(
   "clean",
+  "svgxuse",
   "copy",
   "css",
   "images",
   "sprite",
-  "svgxuse",
   "webp",
   "jsmin",
   "delduble",

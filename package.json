@@ -27,6 +27,7 @@
     "pump": "^3.0.0",
     "stylelint": "9.6.x",
     "stylelint-config-htmlacademy": "0.1.x",
+    "svg4everybody": "^2.1.9",
     "svgxuse": "^1.2.6"
   },
   "scripts": {
