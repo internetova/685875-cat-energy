@@ -8,5 +8,6 @@
 *.sublime*
 node_modules/
 build/
+pixel/
 npm-debug.*
 Thumbs.db

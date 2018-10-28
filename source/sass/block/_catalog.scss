@@ -10,12 +10,13 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    margin-top: 50px;
-    margin-bottom: 22px;
+    margin-top: 52px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 68px;
+    margin-top: 70px;
+    //margin-bottom: 27px;
   }
 
   &::before {

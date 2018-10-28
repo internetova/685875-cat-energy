@@ -28,6 +28,7 @@
   @media (min-width: $desktop) {
     min-width: 500px;
     width: 50%;
+    padding-top: 45px;
   }
 
   &:first-child {
@@ -93,8 +94,8 @@
       }
 
       @media (min-width: $desktop) {
-        top: 50px;
-        left: 50px;
+        top: 47px;
+        left: 53px;
         right: unset;
         width: 100px;
         height: 100px;
@@ -120,7 +121,7 @@
       }
 
       @media (min-width: $desktop) {
-        top: 45px;
+        top: 41px;
         left: 65px;
         right: unset;
         width: 70px;
@@ -163,8 +164,8 @@
       }
 
       @media (min-width: $desktop) {
-        top: 50px;
-        left: 50px;
+        top: 45px;
+        left: 51px;
         right: unset;
         width: 100px;
         height: 100px;
@@ -190,7 +191,7 @@
       }
 
       @media (min-width: $desktop) {
-        top: 75px;
+        top: 70px;
         left: 34px;
         right: unset;
         width: 133px;

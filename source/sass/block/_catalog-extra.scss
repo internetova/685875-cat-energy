@@ -20,7 +20,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 }
 
@@ -175,7 +175,8 @@
 
   @media (min-width: $tablet) {
     width: 280px;
-    margin-bottom: 18px;
+    margin-top: 5px;
+    margin-bottom: 13px;
   }
 
   @media (min-width: $desktop) {
@@ -284,7 +285,7 @@
 
   @media (min-width: $tablet) {
     margin-top: 73px;
-    margin-right: 122px;
+    margin-right: 115px;
     text-align: left;
   }
 
@@ -293,5 +294,9 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+  }
+
+  span {
+    display: block;
   }
 }

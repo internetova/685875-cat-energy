@@ -1,5 +1,9 @@
 .page-footer {
   background: $bg-gray;
+
+  @media (min-width: $desktop) {
+    margin-top: 7px;
+  }
 }
 
 .page-footer__wrapper {
@@ -21,6 +25,7 @@
 
   @media (min-width: $tablet) {
     margin: 0;
+    margin-top: 5px;
   }
 
   &:hover {

@@ -1,7 +1,7 @@
 .page-header {
   @media (min-width: $desktop) {
     position: relative;
-    padding-top: 30px;
+    padding-top: 50px;
   }
 }
 
@@ -23,24 +23,6 @@
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/index-background-desktop@2x.jpg");
       }
-    }
-  }
-}
-
-@media (min-width: $desktop) {
-  .page-header__index .main-nav__link {
-    color: $color-header-index;
-
-    &:hover {
-      color: $color-header-hover-index;
-    }
-
-    &:active {
-      color: $color-header-active-index;
-    }
-
-    &::before {
-      background: $color-header-index;
     }
   }
 }

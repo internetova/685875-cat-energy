@@ -52,7 +52,7 @@
               <li class="form__input-data-item">
                 <label class="form__label" for="cat-name-id">Имя:*</label>
                 <div class="form__input-wrapper">
-                  <input class="form__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" required>
+                  <input class="form__input" id="cat-name-id" type="text" name="cat-name" placeholder="Барсик" maxlength="25" required>
                 </div>
               </li>
               <li class="form__input-data-item">
@@ -75,15 +75,16 @@
             <legend class="visually-hidden">Цель диеты</legend>
             <ul class="form__target-list">
               <li class="form__target-item">
-                <input class="form__input-radio" type="radio" name="target" id="cat-fat-id" checked>
+                <input class="form__input-radio" type="radio" name="target" id="cat-fat-id" value="Похудение" checked>
                 <label class="form__label form__label-radio" for="cat-fat-id">Похудение</label>
               </li>
               <li class="form__target-item">
-                <input class="form__input-radio" type="radio" name="target" id="cat-thin-id">
+                <input class="form__input-radio" type="radio" name="target" id="cat-thin-id" value="Набор массы">
                 <label class="form__label form__label-radio" for="cat-thin-id">Набор массы</label>
               </li>
               <li class="form__target-item">
-                <input class="form__input-radio" type="radio" name="target" id="cat-advice-id">
+                <input class="form__input-radio" type="radio" name="target" id="cat-advice-id" value="Не знаю (Нужен ваш
+                  совет)">
                 <label class="form__label form__label-radio" for="cat-advice-id">Не знаю (Нужен ваш
                   совет)</label>
               </li>
@@ -95,19 +96,19 @@
         <h3 class="form__section-header">Контактные данные (владельца кота)</h3>
         <ul class="form__contacts-list">
           <li class="form__contacts-item">
-            <label class="form__label" for="cat-email-id">E-mail:*</label>
+            <label class="form__label form__label--icon" for="cat-email-id">E-mail:*</label>
             <div class="form__input-wrapper">
-              <input class="form__input form__input--icon" id="cat-email-id" type="email" name="cat-email" placeholder="kuklachev@gmail.com" required>
+              <input class="form__input form__input--icon" id="cat-email-id" type="email" name="cat-email" placeholder="kuklachev@gmail.com" maxlength="25" required>
               <svg class="form__input__icon" width="17" height="20">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>
             </div>
           </li>
           <li class="form__contacts-item">
-            <label class="form__label" for="cat-phone-id">Телефон:*</label>
+            <label class="form__label form__label--icon form__label--phone" for="cat-phone-id">Телефон:*</label>
             <div class="form__input-wrapper">
-              <input class="form__input form__input--icon" id="cat-phone-id" type="tel" name="cat-phone" placeholder="8 (960) 900-60-90" required>
-              <svg class="form__input__icon" width="20" height="20">
+              <input class="form__input form__input--icon" id="cat-phone-id" type="tel" name="cat-phone" placeholder="8 (960) 900-60-90" maxlength="18" required>
+              <svg class="form__input__icon form__input__icon--phone" width="20" height="20">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
             </div>
@@ -122,19 +123,19 @@
         <h3 class="form__section-header form__section-header--small2">Дополнительно</h3>
         <ul class="form__extra-list">
           <li class="form__extra-item">
-            <input class="form__input-checkbox" type="checkbox" name="sugar" id="sugar-id" checked>
+            <input class="form__input-checkbox" type="checkbox" name="sugar" id="sugar-id" checked value="Сахарозаменитель">
             <label class="form__label form__label-checkbox" for="sugar-id">Сахарозаменитель</label>
           </li>
           <li class="form__extra-item">
-            <input class="form__input-checkbox" type="checkbox" name="water" id="water-id">
+            <input class="form__input-checkbox" type="checkbox" name="water" id="water-id" value="Питьевая вода">
             <label class="form__label form__label-checkbox" for="water-id">Питьевая вода</label>
           </li>
           <li class="form__extra-item">
-            <input class="form__input-checkbox" type="checkbox" name="milk" id="milk-id">
+            <input class="form__input-checkbox" type="checkbox" name="milk" id="milk-id" value="Молоко">
             <label class="form__label form__label-checkbox" for="milk-id">Молоко</label>
           </li>
           <li class="form__extra-item">
-            <input class="form__input-checkbox" type="checkbox" name="vitamins" id="vitamins-id">
+            <input class="form__input-checkbox" type="checkbox" name="vitamins" id="vitamins-id" value="Витамины">
             <label class="form__label form__label-checkbox" for="vitamins-id">Витамины</label>
           </li>
         </ul>
@@ -172,6 +173,7 @@
       <ul class="social-buttons__list">
         <li class="social-buttons__item">
           <a class="social-buttons__link" href="#">
+            <span class="visually-hidden">ВКонтакте</span>
             <svg class="social-buttons__icon social-buttons__icon--vk" width="22" height="12">
               <use xlink:href="img/sprite.svg#icon-vk-mobile"></use>
             </svg>
@@ -179,6 +181,7 @@
         </li>
         <li class="social-buttons__item">
           <a class="social-buttons__link" href="#">
+            <span class="visually-hidden">Инстаграм</span>
             <svg class="social-buttons__icon social-buttons__icon--insta" width="16" height="16">
               <use xlink:href="img/sprite.svg#icon-insta-mobile"></use>
             </svg>
@@ -186,6 +189,7 @@
         </li>
         <li class="social-buttons__item">
           <a class="social-buttons__link" href="#">
+            <span class="visually-hidden">Фэйсбук</span>
             <svg class="social-buttons__icon social-buttons__icon--fb" width="10" height="19">
               <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
             </svg>
